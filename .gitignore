@@ -13,7 +13,7 @@ venv/
 .vscode/
 
 # Dataset
-data/raw_videos/
+datasets/raw/
 
 # Models
 models/*.pt

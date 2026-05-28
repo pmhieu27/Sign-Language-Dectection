@@ -1,0 +1,578 @@
+id,video_name,label,person,group
+1,Huyen_209.MOV,Mẹ,huyen,Nhóm A
+2,Kiều_81.MOV,Mẹ,kieu,Nhóm A
+3,Huyen_210.MOV,Mẹ,huyen,Nhóm A
+4,Thu_54.MOV,Mẹ,thu,Nhóm A
+5,Thu_57.MOV,Mẹ,thu,Nhóm D
+6,Kiều_32.mp4,Mẹ,kieu,Nhóm D
+7,Huyen_38.MOV,Mẹ,huyen,Nhóm D
+8,Thu_58.MOV,Mẹ,thu,Nhóm E
+9,Kiều_45.mp4,Mẹ,kieu,Nhóm E
+10,Kiều_82.MOV,Mẹ,kieu,Nhóm C
+11,Huyen_214.MOV,Mẹ,huyen,Nhóm C
+12,Thu_56.MOV,Mẹ,thu,Nhóm C
+13,Huyen_213.MOV,Mẹ,huyen,Nhóm C
+14,Thu_55.MOV,Mẹ,thu,Nhóm B
+15,Huyen_211.MOV,Mẹ,huyen,Nhóm B
+16,Huyen_212.MOV,Mẹ,huyen,Nhóm B
+17,Kiều_20.mp4,Mẹ,kieu,Nhóm B
+18,Kiều_80.MOV,Mẹ,kieu,Nhóm B
+19,Huyen_204.MOV,Không,huyen,Nhóm A
+20,Kiều_51.mp4,Không,kieu,Nhóm A
+21,Huyen_205.MOV,Không,huyen,Nhóm A
+22,Kiều_57.mp4,Không,kieu,Nhóm D
+23,Thu_78.MOV,Không,thu,Nhóm D
+24,Thu_121.MOV,Không,thu,Nhóm E
+25,Kiều_49.mp4,Không,kieu,Nhóm E
+26,Thu_77.MOV,Không,thu,Nhóm E
+27,Kiều_55.mp4,Không,kieu,Nhóm C
+28,Huyen_207.MOV,Không,huyen,Nhóm C
+29,Huyen_206.MOV,Không,huyen,Nhóm B
+30,Huyen_16.MOV,Không,huyen,Nhóm B
+31,Kiều_53.mp4,Không,kieu,Nhóm B
+32,Kiều_92.MOV,Không,kieu,Nhóm B
+33,Kiều_156.MOV,Đói,kieu,Nhóm A
+34,Huyen_88.MOV,Đói,huyen,Nhóm A
+35,Huyen_167.MOV,Đói,huyen,Nhóm A
+36,Huyen_166.MOV,Đói,huyen,Nhóm A
+37,Thu_73.MOV,Đói,thu,Nhóm D
+38,Kiều_160.MOV,Đói,kieu,Nhóm D
+39,Huyen_30.MOV,Đói,huyen,Nhóm D
+40,Kiều_159.MOV,Đói,kieu,Nhóm E
+41,Huyen_92.MOV,Đói,huyen,Nhóm E
+42,Kiều_158.MOV,Đói,kieu,Nhóm C
+43,Huyen_171.MOV,Đói,huyen,Nhóm C
+44,Huyen_170.MOV,Đói,huyen,Nhóm C
+45,Huyen_90.MOV,Đói,huyen,Nhóm C
+46,Huyen_91.MOV,Đói,huyen,Nhóm B
+47,Huyen_169.MOV,Đói,huyen,Nhóm B
+48,Huyen_168.MOV,Đói,huyen,Nhóm B
+49,Kiều_157.MOV,Đói,kieu,Nhóm B
+50,Kiều_178.MOV,Ngủ,kieu,Nhóm A
+51,Thu_49.mov,Ngủ,thu,Nhóm A
+52,Huyen_221.MOV,Ngủ,huyen,Nhóm A
+53,Kiều_147.MOV,Ngủ,kieu,Nhóm A
+54,Huyen_222.MOV,Ngủ,huyen,Nhóm A
+55,Huyen_40.MOV,Ngủ,huyen,Nhóm D
+56,Thu_52.mov,Ngủ,thu,Nhóm D
+57,Kiều_151.MOV,Ngủ,kieu,Nhóm D
+58,Kiều_150.MOV,Ngủ,kieu,Nhóm E
+59,Thu_53.mov,Ngủ,thu,Nhóm E
+60,Kiều_149.MOV,Ngủ,kieu,Nhóm C
+61,Thu_51.mov,Ngủ,thu,Nhóm C
+62,Huyen_226.MOV,Ngủ,huyen,Nhóm C
+63,Huyen_225.MOV,Ngủ,huyen,Nhóm C
+64,Kiều_148.MOV,Ngủ,kieu,Nhóm B
+65,Huyen_224.MOV,Ngủ,huyen,Nhóm B
+66,Thu_50.mov,Ngủ,thu,Nhóm B
+67,Huyen_223.MOV,Ngủ,huyen,Nhóm B
+68,Huyen_233.MOV,Thích,huyen,Nhóm A
+69,Kiều_184.MOV,Thích,kieu,Nhóm A
+70,Thu_12.MOV,Thích,thu,Nhóm A
+71,Huyen_234.MOV,Thích,huyen,Nhóm A
+72,Kiều_122.MOV,Thích,kieu,Nhóm A
+73,Kiều_125.MOV,Thích,kieu,Nhóm D
+74,Thu_15.MOV,Thích,thu,Nhóm D
+75,Huyen_39.MOV,Thích,huyen,Nhóm D
+76,Thu_16.MOV,Thích,thu,Nhóm E
+77,Kiều_126.mov,Thích,kieu,Nhóm E
+78,Kiều_185.MOV,Thích,kieu,Nhóm E
+79,Huyen_237.MOV,Thích,huyen,Nhóm C
+80,Thu_14.MOV,Thích,thu,Nhóm C
+81,Kiều_124.MOV,Thích,kieu,Nhóm C
+82,Huyen_238.MOV,Thích,huyen,Nhóm C
+83,Huyen_236.MOV,Thích,huyen,Nhóm B
+84,Huyen_235.MOV,Thích,huyen,Nhóm B
+85,Kiều_123.MOV,Thích,kieu,Nhóm B
+86,Thu_13.MOV,Thích,thu,Nhóm B
+87,Huyen_61.MOV,Ăn,huyen,Nhóm A
+88,Huyen_115.MOV,Ăn,huyen,Nhóm A
+89,Thu_33.MOV,Ăn,thu,Nhóm A
+90,Huyen_114.MOV,Ăn,huyen,Nhóm A
+91,Kiều_72.MOV,Ăn,kieu,Nhóm A
+92,Thu_68.MOV,Ăn,thu,Nhóm D
+93,Kiều_33.mp4,Ăn,kieu,Nhóm D
+94,Huyen_23.MOV,Ăn,huyen,Nhóm D
+95,Huyen_64.MOV,Ăn,huyen,Nhóm E
+96,Thu_75.MOV,Ăn,thu,Nhóm E
+97,Kiều_46.mp4,Ăn,kieu,Nhóm E
+98,Thu_32.MOV,Ăn,thu,Nhóm E
+99,Huyen_63.MOV,Ăn,huyen,Nhóm C
+100,Kiều_73.MOV,Ăn,kieu,Nhóm C
+101,Huyen_118.MOV,Ăn,huyen,Nhóm C
+102,Huyen_119.MOV,Ăn,huyen,Nhóm C
+103,Huyen_117.MOV,Ăn,huyen,Nhóm B
+104,Huyen_116.MOV,Ăn,huyen,Nhóm B
+105,Huyen_62.MOV,Ăn,huyen,Nhóm B
+106,Kiều_21.mp4,Ăn,kieu,Nhóm B
+107,Kiều_60.MOV,1,kieu,Nhóm A
+108,Kiều_59.MOV,1,kieu,Nhóm A
+109,Huyen_49.MOV,1,huyen,Nhóm A
+110,Thu_23.MOV,1,thu,Nhóm A
+111,Huyen_100.MOV,1,huyen,Nhóm A
+112,Kiều_58.MOV,1,kieu,Nhóm A
+113,Kiều_24.mp4,1,kieu,Nhóm D
+114,Thu_61.MOV,1,thu,Nhóm D
+115,Huyen_20.MOV,1,huyen,Nhóm D
+116,Kiều_37.mp4,1,kieu,Nhóm E
+117,Thu_125.mov,1,thu,Nhóm E
+118,Thu_64.MOV,1,thu,Nhóm E
+119,Huyen_52.MOV,1,huyen,Nhóm E
+120,Huyen_103.MOV,1,huyen,Nhóm C
+121,Kiều_61.mov,1,kieu,Nhóm C
+122,Huyen_104.MOV,1,huyen,Nhóm C
+123,Huyen_51.MOV,1,huyen,Nhóm C
+124,Kiều_11.mp4,1,kieu,Nhóm B
+125,Huyen_50.MOV,1,huyen,Nhóm B
+126,Huyen_102.MOV,1,huyen,Nhóm B
+127,Huyen_101.MOV,1,huyen,Nhóm B
+128,Kiều_50.mp4,Có,kieu,Nhóm A
+129,Huyen_148.MOV,Có,huyen,Nhóm A
+130,Kiều_88.MOV,Có,kieu,Nhóm A
+131,Thu_37.MOV,Có,thu,Nhóm A
+132,Huyen_77.MOV,Có,huyen,Nhóm A
+133,Huyen_149.MOV,Có,huyen,Nhóm A
+134,Kiều_56.mp4,Có,kieu,Nhóm D
+135,Huyen_27.MOV,Có,huyen,Nhóm D
+136,Huyen_80.MOV,Có,huyen,Nhóm E
+137,Thu_119.MOV,Có,thu,Nhóm E
+138,Kiều_48.mp4,Có,kieu,Nhóm E
+139,Thu_120.MOV,Có,thu,Nhóm E
+140,Huyen_152.MOV,Có,huyen,Nhóm C
+141,Huyen_79.MOV,Có,huyen,Nhóm C
+142,Huyen_153.MOV,Có,huyen,Nhóm C
+143,Kiều_54.mp4,Có,kieu,Nhóm C
+144,Huyen_150.MOV,Có,huyen,Nhóm B
+145,Huyen_78.MOV,Có,huyen,Nhóm B
+146,Kiều_52.mp4,Có,kieu,Nhóm B
+147,Huyen_151.MOV,Có,huyen,Nhóm B
+148,Huyen_178.MOV,Giúp đỡ,huyen,Nhóm A
+149,Huyen_179.MOV,Giúp đỡ,huyen,Nhóm A
+150,Huyen_96.MOV,Giúp đỡ,huyen,Nhóm A
+151,Thu_17.MOV,Giúp đỡ,thu,Nhóm A
+152,Kiều_107.MOV,Giúp đỡ,kieu,Nhóm A
+153,Kiều_111.MOV,Giúp đỡ,kieu,Nhóm D
+154,Huyen_32.MOV,Giúp đỡ,huyen,Nhóm D
+155,Thu_21.MOV,Giúp đỡ,thu,Nhóm D
+156,Thu_22.MOV,Giúp đỡ,thu,Nhóm E
+157,Kiều_110.MOV,Giúp đỡ,kieu,Nhóm E
+158,Huyen_99.MOV,Giúp đỡ,huyen,Nhóm E
+159,Huyen_98.MOV,Giúp đỡ,huyen,Nhóm C
+160,Thu_20.MOV,Giúp đỡ,thu,Nhóm C
+161,Thu_19.MOV,Giúp đỡ,thu,Nhóm C
+162,Kiều_109.MOV,Giúp đỡ,kieu,Nhóm C
+163,Huyen_180.MOV,Giúp đỡ,huyen,Nhóm B
+164,Kiều_108.MOV,Giúp đỡ,kieu,Nhóm B
+165,Thu_18.MOV,Giúp đỡ,thu,Nhóm B
+166,Huyen_97.MOV,Giúp đỡ,huyen,Nhóm B
+167,Kiều_179.MOV,Hiểu,kieu,Nhóm A
+168,Huyen_186.MOV,Hiểu,huyen,Nhóm A
+169,Thu_06.MOV,Hiểu,thu,Nhóm A
+170,Thu_01.MOV,Hiểu,thu,Nhóm A
+171,Kiều_143.MOV,Hiểu,kieu,Nhóm A
+172,Huyen_187.MOV,Hiểu,huyen,Nhóm A
+173,Kiều_142.MOV,Hiểu,kieu,Nhóm D
+174,Huyen_34.MOV,Hiểu,huyen,Nhóm D
+175,Thu_02.MOV,Hiểu,thu,Nhóm D
+176,Thu_03.MOV,Hiểu,thu,Nhóm E
+177,Thu_126.MOV,Hiểu,thu,Nhóm E
+178,Kiều_144.MOV,Hiểu,kieu,Nhóm E
+179,Thu_05.MOV,Hiểu,thu,Nhóm C
+180,Huyen_190.MOV,Hiểu,huyen,Nhóm C
+181,Huyen_191.MOV,Hiểu,huyen,Nhóm C
+182,Kiều_146.MOV,Hiểu,kieu,Nhóm C
+183,Kiều_145.MOV,Hiểu,kieu,Nhóm B
+184,Huyen_189.MOV,Hiểu,huyen,Nhóm B
+185,Thu_05.MOV,Hiểu,thu,Nhóm B
+186,Huyen_188.MOV,Hiểu,huyen,Nhóm B
+187,Huyen_246.MOV,Uống,huyen,Nhóm A
+188,Kiều_93.MOV,Uống,kieu,Nhóm A
+189,Huyen_245.MOV,Uống,huyen,Nhóm A
+190,Thu_60.MOV,Uống,thu,Nhóm D
+191,Thu_59.MOV,Uống,thu,Nhóm D
+192,Huyen_44.MOV,Uống,huyen,Nhóm D
+193,Kiều_34.mp4,Uống,kieu,Nhóm D
+194,Kiều_47.mp4,Uống,kieu,Nhóm E
+195,Thu_81.MOV,Uống,thu,Nhóm E
+196,Huyen_250.MOV,Uống,huyen,Nhóm C
+197,Kiều_94.MOV,Uống,kieu,Nhóm C
+198,Huyen_249.MOV,Uống,huyen,Nhóm C
+199,Kiều_22.mp4,Uống,kieu,Nhóm B
+200,Huyen_247.MOV,Uống,huyen,Nhóm B
+201,Huyen_248.MOV,Uống,huyen,Nhóm B
+202,Huyen_215.MOV,Mệt,huyen,Nhóm A
+203,Kiều_172.MOV,Mệt,kieu,Nhóm A
+204,Thu_105.mov,Mệt,thu,Nhóm A
+205,Huyen_216.MOV,Mệt,huyen,Nhóm A
+206,Kiều_171.MOV,Mệt,kieu,Nhóm D
+207,Thu_80.mov,Mệt,thu,Nhóm D
+208,Huyen_48.MOV,Mệt,huyen,Nhóm D
+209,Kiều_175.MOV,Mệt,kieu,Nhóm E
+210,Thu_79.MOV,Mệt,thu,Nhóm E
+211,Thu_107.mov,Mệt,thu,Nhóm C
+212,Huyen_220.MOV,Mệt,huyen,Nhóm C
+213,Kiều_174.MOV,Mệt,kieu,Nhóm C
+214,Huyen_219.MOV,Mệt,huyen,Nhóm C
+215,Huyen_218.MOV,Mệt,huyen,Nhóm B
+216,Huyen_217.MOV,Mệt,huyen,Nhóm B
+217,Kiều_173.MOV,Mệt,kieu,Nhóm B
+218,Thu_106.mov,Mệt,thu,Nhóm B
+219,Huyen_198.MOV,Khát,huyen,Nhóm A
+220,Kiều_153.MOV,Khát,kieu,Nhóm A
+221,Thu_86.MOV,Khát,thu,Nhóm A
+222,Huyen_199.MOV,Khát,huyen,Nhóm A
+223,Kiều_152.MOV,Khát,kieu,Nhóm D
+224,Huyen_36.MOV,Khát,huyen,Nhóm D
+225,Thu_88.MOV,Khát,thu,Nhóm D
+226,Thu_87.MOV,Khát,thu,Nhóm E
+227,Kiều_02.mov,Khát,kieu,Nhóm E
+228,Kiều_155.MOV,Khát,kieu,Nhóm C
+229,Thu_85.MOV,Khát,thu,Nhóm C
+230,Huyen_202.MOV,Khát,huyen,Nhóm C
+231,Huyen_203.MOV,Khát,huyen,Nhóm C
+232,Huyen_201.MOV,Khát,huyen,Nhóm B
+233,Kiều_154.MOV,Khát,kieu,Nhóm B
+234,Huyen_200.MOV,Khát,huyen,Nhóm B
+235,Thu_89.MOV,Khát,thu,Nhóm B
+236,Huyen_106.MOV,2,huyen,Nhóm A
+237,Huyen_105.MOV,2,huyen,Nhóm A
+238,Thu_23.MOV,2,thu,Nhóm A
+239,Kiều_62.MOV,2,kieu,Nhóm A
+240,Huyen_54.MOV,2,huyen,Nhóm A
+241,Kiều_63.mov,2,kieu,Nhóm A
+242,Huyen_21.MOV,2,huyen,Nhóm D
+243,Thu_27.MOV,2,thu,Nhóm D
+244,Kiều_25.mp4,2,kieu,Nhóm D
+245,Kiều_38.mp4,2,kieu,Nhóm E
+246,Thu_26.MOV,2,thu,Nhóm E
+247,Huyen_56.MOV,2,huyen,Nhóm E
+248,Huyen_108.MOV,2,huyen,Nhóm C
+249,Thu_24.MOV,2,thu,Nhóm C
+250,Huyen_109.MOV,2,huyen,Nhóm C
+251,Kiều_64.mov,2,kieu,Nhóm C
+252,Kiều_12.mp4,2,kieu,Nhóm B
+253,Thu_25.MOV,2,thu,Nhóm B
+254,Huyen_107.MOV,2,huyen,Nhóm B
+255,Huyen_53.MOV,2,huyen,Nhóm B
+256,Kiều_74.MOV,Bạn bè,kieu,Nhóm A
+257,Huyen_09.MOV,Bạn bè,huyen,Nhóm A
+258,Huyen_08.MOV,Bạn bè,huyen,Nhóm A
+259,Huyen_126.MOV,Bạn bè,huyen,Nhóm A
+260,Huyen_125.MOV,Bạn bè,huyen,Nhóm A
+261,Kiều_182.MOV,Bạn bè,kieu,Nhóm A
+262,Kiều_75.MOV,Bạn bè,kieu,Nhóm A
+263,Thu_72.MOV,Bạn bè,thu,Nhóm D
+264,Kiều_36.mp4,Bạn bè,kieu,Nhóm D
+265,Huyen_12.MOV,Bạn bè,huyen,Nhóm D
+266,Huyen_13.MOV,Bạn bè,huyen,Nhóm E
+267,Thu_67.MOV,Bạn bè,thu,Nhóm E
+268,Thu_124.mov,Bạn bè,thu,Nhóm E
+269,Huyen_10.MOV,Bạn bè,huyen,Nhóm C
+270,Kiều_76.MOV,Bạn bè,kieu,Nhóm C
+271,Huyen_130.MOV,Bạn bè,huyen,Nhóm C
+272,Huyen_129.MOV,Bạn bè,huyen,Nhóm C
+273,Huyen_128.MOV,Bạn bè,huyen,Nhóm B
+274,Kiều_183.MOV,Bạn bè,kieu,Nhóm B
+275,Huyen_11.MOV,Bạn bè,huyen,Nhóm B
+276,Huyen_127.MOV,Bạn bè,huyen,Nhóm B
+277,Kiều_23.mp4,Bạn bè,kieu,Nhóm B
+278,Kiều_102.MOV,Xin lỗi,kieu,Nhóm A
+279,Kiều_06.mp4,Xin lỗi,kieu,Nhóm A
+280,Huyen_257.MOV,Xin lỗi,huyen,Nhóm A
+281,Thu_113.mov,Xin lỗi,thu,Nhóm A
+282,Huyen_256.MOV,Xin lỗi,huyen,Nhóm A
+283,Kiều_100.MOV,Xin lỗi,kieu,Nhóm A
+284,Kiều_04.mp4,Xin lỗi,kieu,Nhóm A
+285,Huyen_46.MOV,Xin lỗi,huyen,Nhóm D
+286,Thu_62.MOV,Xin lỗi,thu,Nhóm D
+287,Kiều_101.MOV,Xin lỗi,kieu,Nhóm D
+288,Kiều_29.mp4,Xin lỗi,kieu,Nhóm D
+289,Kiều_42.mp4,Xin lỗi,kieu,Nhóm E
+290,Thu_63.MOV,Xin lỗi,thu,Nhóm E
+291,Thu_122.MOV,Xin lỗi,thu,Nhóm E
+292,Huyen_261.MOV,Xin lỗi,huyen,Nhóm C
+293,Huyen_260.MOV,Xin lỗi,huyen,Nhóm C
+294,Kiều_103.MOV,Xin lỗi,kieu,Nhóm C
+295,Huyen_259.MOV,Xin lỗi,huyen,Nhóm B
+296,Huyen_258.MOV,Xin lỗi,huyen,Nhóm B
+297,Kiều_16.mp4,Xin lỗi,kieu,Nhóm B
+298,Huyen_01.MOV,Anh Chị,huyen,Nhóm A
+299,Huyen_120.MOV,Anh Chị,huyen,Nhóm A
+300,Kiều_69.MOV,Anh Chị,kieu,Nhóm A
+301,Kiều_70.MOV,Anh Chị,kieu,Nhóm A
+302,Huyen_05.MOV,Anh Chị,huyen,Nhóm A
+303,Huyen_04.MOV,Anh Chị,huyen,Nhóm A
+304,Huyen_06.MOV,Anh Chị,huyen,Nhóm D
+305,Thu_66.MOV,Anh Chị,thu,Nhóm D
+306,Kiều_35.mp4,Anh Chị,kieu,Nhóm D
+307,Thu_133.MOV,Anh Chị,thu,Nhóm E
+308,Thu_134.MOV,Anh Chị,thu,Nhóm E
+309,Kiều_01.mp4,Anh Chị,kieu,Nhóm E
+310,Thu_65.MOV,Anh Chị,thu,Nhóm E
+311,Huyen_07.MOV,Anh Chị,huyen,Nhóm E
+312,Huyen_02.MOV,Anh Chị,huyen,Nhóm C
+313,Huyen_124.MOV,Anh Chị,huyen,Nhóm C
+314,Huyen_123.MOV,Anh Chị,huyen,Nhóm C
+315,Kiều_71.MOV,Anh Chị,kieu,Nhóm C
+316,Huyen_121.MOV,Anh Chị,huyen,Nhóm B
+317,Kiều_17.mp4,Anh Chị,kieu,Nhóm B
+318,Thu_131.MOV,Anh Chị,thu,Nhóm B
+319,Huyen_122.MOV,Anh Chị,huyen,Nhóm B
+320,Huyen_03.MOV,Anh Chị,huyen,Nhóm B
+321,Thu_132.MOV,Anh Chị,thu,Nhóm B
+322,Kiều_112.MOV,Tôi,kieu,Nhóm A
+323,Huyen_240.MOV,Tôi,huyen,Nhóm A
+324,Huyen_239.MOV,Tôi,huyen,Nhóm A
+325,Thu_39.MOV,Tôi,thu,Nhóm A
+326,Thu_41.MOV,Tôi,thu,Nhóm D
+327,Huyen_42.MOV,Tôi,huyen,Nhóm D
+328,Kiều_116.MOV,Tôi,kieu,Nhóm D
+329,Kiều_115.MOV,Tôi,kieu,Nhóm E
+330,Thu_43.MOV,Tôi,thu,Nhóm E
+331,Thu_42.MOV,Tôi,thu,Nhóm C
+332,Huyen_244.MOV,Tôi,huyen,Nhóm C
+333,Kiều_114.MOV,Tôi,kieu,Nhóm C
+334,Huyen_243.MOV,Tôi,huyen,Nhóm C
+335,Kiều_113.MOV,Tôi,kieu,Nhóm B
+336,Huyen_241.MOV,Tôi,huyen,Nhóm B
+337,Huyen_242.MOV,Tôi,huyen,Nhóm B
+338,Thu_40.MOV,Tôi,thu,Nhóm B
+339,Kiều_84.MOV,Cảm ơn,kieu,Nhóm A
+340,Kiều_07.mp4,Cảm ơn,kieu,Nhóm A
+341,Kiều_86.MOV,Cảm ơn,kieu,Nhóm A
+342,Huyen_73.MOV,Cảm ơn,huyen,Nhóm A
+343,Kiều_83.MOV,Cảm ơn,kieu,Nhóm A
+344,Kiều_09.mp4,Cảm ơn,kieu,Nhóm A
+345,Kiều_28.mp4,Cảm ơn,kieu,Nhóm D
+346,Huyen_26.MOV,Cảm ơn,huyen,Nhóm D
+347,Thu_74.MOV,Cảm ơn,thu,Nhóm D
+348,Huyen_76.MOV,Cảm ơn,huyen,Nhóm E
+349,Kiều_85.MOV,Cảm ơn,kieu,Nhóm E
+350,Thu_76.MOV,Cảm ơn,thu,Nhóm E
+351,Thu_123.mov,Cảm ơn,thu,Nhóm E
+352,Kiều_41.mp4,Cảm ơn,kieu,Nhóm E
+353,Huyen_147.MOV,Cảm ơn,huyen,Nhóm C
+354,Huyen_146.MOV,Cảm ơn,huyen,Nhóm C
+355,Kiều_87.MOV,Cảm ơn,kieu,Nhóm C
+356,Huyen_75.MOV,Cảm ơn,huyen,Nhóm C
+357,Huyen_74.MOV,Cảm ơn,huyen,Nhóm B
+358,Huyen_140.MOV,Cảm ơn,huyen,Nhóm B
+359,Kiều_15.mp4,Cảm ơn,kieu,Nhóm B
+360,Huyen_145.MOV,Cảm ơn,huyen,Nhóm B
+361,Kiều_65.MOV,3,kieu,Nhóm A
+362,Thu_27.MOV,3,thu,Nhóm A
+363,Kiều_67.MOV,3,kieu,Nhóm A
+364,Huyen_110.MOV,3,huyen,Nhóm A
+365,Huyen_57.MOV,3,huyen,Nhóm A
+366,Huyen_111.MOV,3,huyen,Nhóm A
+367,Huyen_22.MOV,3,huyen,Nhóm D
+368,Thu_30.mov,3,thu,Nhóm D
+369,Kiều_26.mp4,3,kieu,Nhóm D
+370,Huyen_60.MOV,3,huyen,Nhóm E
+371,Kiều_39.mp4,3,kieu,Nhóm E
+372,Thu_31.mov,3,thu,Nhóm E
+373,Kiều_68.MOV,3,kieu,Nhóm C
+374,Thu_29.mov,3,thu,Nhóm C
+375,Huyen_59.MOV,3,huyen,Nhóm C
+376,Huyen_113.MOV,3,huyen,Nhóm C
+377,Huyen_112.MOV,3,huyen,Nhóm B
+378,Thu_28.mov,3,thu,Nhóm B
+379,Kiều_13.mp4,3,kieu,Nhóm B
+380,Huyen_58.MOV,3,huyen,Nhóm B
+381,Huyen_182.MOV,Hạnh phúc,huyen,Nhóm A
+382,Kiều_10.mp4,Hạnh phúc,kieu,Nhóm A
+383,Thu_101.mov,Hạnh phúc,thu,Nhóm A
+384,Kiều_89.mp4,Hạnh phúc,kieu,Nhóm A
+385,Huyen_181.MOV,Hạnh phúc,huyen,Nhóm A
+386,Kiều_91.MOV,Hạnh phúc,kieu,Nhóm A
+387,Thu_104.mov,Hạnh phúc,thu,Nhóm D
+388,Kiều_30.mp4,Hạnh phúc,kieu,Nhóm D
+389,Huyen_33.MOV,Hạnh phúc,huyen,Nhóm D
+390,Thu_117.MOV,Hạnh phúc,thu,Nhóm E
+391,Thu_103.mov,Hạnh phúc,thu,Nhóm E
+392,Kiều_43.mp4,Hạnh phúc,kieu,Nhóm E
+393,Huyen_185.MOV,Hạnh phúc,huyen,Nhóm C
+394,Thu_100.mov,Hạnh phúc,thu,Nhóm C
+395,Kiều_18.mp4,Hạnh phúc,kieu,Nhóm B
+396,Kiều_90.MOV,Hạnh phúc,kieu,Nhóm B
+397,Thu_102.mov,Hạnh phúc,thu,Nhóm B
+398,Huyen_184.MOV,Hạnh phúc,huyen,Nhóm B
+399,Huyen_183.MOV,Hạnh phúc,huyen,Nhóm B
+400,Huyen_251.MOV,Xin chào,huyen,Nhóm A
+401,Thu_110.mov,Xin chào,thu,Nhóm A
+402, Kiều_98.MOV,Xin chào, kiều,Nhóm A
+403,Thu_129.MOV,Xin chào,thu,Nhóm A
+404,Huyen_252.MOV,Xin chào,huyen,Nhóm A
+405,Kiều_95.MOV,Xin chào,kieu,Nhóm A
+406,Thu_111.mov,Xin chào,thu,Nhóm D
+407,Kiều_27.mp4,Xin chào,kieu,Nhóm D
+408,Huyen_45.MOV,Xin chào,huyen,Nhóm D
+409,Thu_112.mov,Xin chào,thu,Nhóm E
+410,Thu_130.MOV,Xin chào,thu,Nhóm E
+411,Kiều_40.mp4,Xin chào,kieu,Nhóm E
+412,Huyen_255.MOV,Xin chào,huyen,Nhóm C
+413,Thu_108.mov,Xin chào,thu,Nhóm C
+414,Huyen_254.MOV,Xin chào,huyen,Nhóm C
+415,Kiều_99.MOV,Xin chào,kieu,Nhóm C
+416, Kiều_03.mp4,Xin chào, kiều,Nhóm B
+417,Huyen_253.MOV,Xin chào,huyen,Nhóm B
+418,Thu_109.mov,Xin chào,thu,Nhóm B
+419,Kiều_14.mp4,Xin chào,kieu,Nhóm B
+420,Kiều_96.MOV,Xin chào,kieu,Nhóm B
+421,Huyen_65.MOV,Bố,huyen,Nhóm A
+422,Huyen_132.MOV,Bố,huyen,Nhóm A
+423,Huyen_131.MOV,Bố,huyen,Nhóm A
+424,Kiều_78.MOV,Bố,kieu,Nhóm A
+425,Thu_114.MOV,Bố,thu,Nhóm D
+426,Thu_36.MOV,Bố,thu,Nhóm D
+427,Kiều_31.mp4,Bố,kieu,Nhóm D
+428,Thu_35.MOV,Bố,thu,Nhóm D
+429,Huyen_24.MOV,Bố,huyen,Nhóm D
+430,Thu_115.MOV,Bố,thu,Nhóm E
+431,Huyen_68.MOV,Bố,huyen,Nhóm E
+432,Kiều_44.mp4,Bố,kieu,Nhóm E
+433,Thu_116.MOV,Bố,thu,Nhóm E
+434,Huyen_134.MOV,Bố,huyen,Nhóm C
+435,Huyen_135.MOV,Bố,huyen,Nhóm C
+436,Kiều_79.mov,Bố,kieu,Nhóm C
+437,Huyen_67.MOV,Bố,huyen,Nhóm C
+438,Huyen_66.MOV,Bố,huyen,Nhóm B
+439,Kiều_19.mp4,Bố,kieu,Nhóm B
+440,Kiều_77.MOV,Bố,kieu,Nhóm B
+441,Huyen_133.MOV,Bố,huyen,Nhóm B
+442,Kiều_165.MOV,Em,kieu,Nhóm A
+443,Huyen_173.MOV,Em,huyen,Nhóm A
+444,Huyen_172.MOV,Em,huyen,Nhóm A
+445,Kiều_161.MOV,Em,kieu,Nhóm A
+446,Huyen_93.MOV,Em,huyen,Nhóm A
+447,Thu_83.mp4,Em,thu,Nhóm D
+448,Kiều_164.MOV,Em,kieu,Nhóm D
+449,Thu_82.mp4,Em,thu,Nhóm D
+450,Huyen_31.MOV,Em,huyen,Nhóm D
+451,Kiều_163.MOV,Em,kieu,Nhóm E
+452,Huyen_95.MOV,Em,huyen,Nhóm E
+453,Thu_84.mp4,Em,thu,Nhóm E
+454,Kiều_162.MOV,Em,kieu,Nhóm C
+455,Huyen_94.MOV,Em,huyen,Nhóm C
+456,Huyen_177.MOV,Em,huyen,Nhóm C
+457,Huyen_176.MOV,Em,huyen,Nhóm C
+458,Huyen_174.MOV,Em,huyen,Nhóm B
+459,Kiều_186.MOV,Em,kieu,Nhóm B
+460,Huyen_175.MOV,Em,huyen,Nhóm B
+461,Huyen_89.MOV,Em,huyen,Nhóm B
+462,Huyen_14.MOV,Làm việc,huyen,Nhóm A
+463,Thu_127.MOV,Làm việc,thu,Nhóm A
+464,Thu_07.MOV,Làm việc,thu,Nhóm A
+465,Huyen_15.MOV,Làm việc,huyen,Nhóm A
+466,Kiều_133.MOV,Làm việc,kieu,Nhóm A
+467,Kiều_132.MOV,Làm việc,kieu,Nhóm D
+468,Thu_10.MOV,Làm việc,thu,Nhóm D
+469,Huyen_37.MOV,Làm việc,huyen,Nhóm D
+470,Kiều_135.MOV,Làm việc,kieu,Nhóm E
+471,Thu_11.MOV,Làm việc,thu,Nhóm E
+472,Thu_128.MOV,Làm việc,thu,Nhóm E
+473,Kiều_136.MOV,Làm việc,kieu,Nhóm C
+474,Huyen_19.MOV,Làm việc,huyen,Nhóm C
+475,Huyen_208.MOV,Làm việc,huyen,Nhóm C
+476,Thu_08.MOV,Làm việc,thu,Nhóm C
+477,Kiều_134.MOV,Làm việc,kieu,Nhóm B
+478,Huyen_17.MOV,Làm việc,huyen,Nhóm B
+479,Thu_09.MOV,Làm việc,thu,Nhóm B
+480,Huyen_18.MOV,Làm việc,huyen,Nhóm B
+481,Kiều_166.MOV,Đau,kieu,Nhóm A
+482,Huyen_154.MOV,Đau,huyen,Nhóm A
+483,Huyen_81.MOV,Đau,huyen,Nhóm A
+484,Huyen_155.MOV,Đau,huyen,Nhóm A
+485,Thu_39.MOV,Đau,thu,Nhóm A
+486,Kiều_170.MOV,Đau,kieu,Nhóm D
+487,Huyen_28.MOV,Đau,huyen,Nhóm D
+488,Huyen_84.MOV,Đau,huyen,Nhóm E
+489,Kiều_169.MOV,Đau,kieu,Nhóm E
+490,Huyen_159.MOV,Đau,huyen,Nhóm C
+491,Huyen_83.MOV,Đau,huyen,Nhóm C
+492,Huyen_156.MOV,Đau,huyen,Nhóm C
+493,Kiều_168.MOV,Đau,kieu,Nhóm C
+494,Huyen_82.MOV,Đau,huyen,Nhóm B
+495,Huyen_158.MOV,Đau,huyen,Nhóm B
+496,Huyen_157.MOV,Đau,huyen,Nhóm B
+497,Kiều_167.MOV,Đau,kieu,Nhóm B
+498,Huyen_69.MOV,Buồn,huyen,Nhóm A
+499,Huyen_136.MOV,Buồn,huyen,Nhóm A
+500,Kiều_118.MOV,Buồn,kieu,Nhóm A
+501,Huyen_137.MOV,Buồn,huyen,Nhóm A
+502,Thu_38.MOV,Buồn,thu,Nhóm A
+503,Thu_70.MOV,Buồn,thu,Nhóm D
+504,Kiều_117.MOV,Buồn,kieu,Nhóm D
+505,Huyen_25.MOV,Buồn,huyen,Nhóm D
+506,Thu_71.MOV,Buồn,thu,Nhóm E
+507,Kiều_121.MOV,Buồn,kieu,Nhóm E
+508,Thu_69.MOV,Buồn,thu,Nhóm E
+509,Huyen_72.MOV,Buồn,huyen,Nhóm E
+510,Huyen_139.MOV,Buồn,huyen,Nhóm C
+511,Huyen_138.MOV,Buồn,huyen,Nhóm C
+512,Huyen_71.MOV,Buồn,huyen,Nhóm C
+513,Kiều_120.MOV,Buồn,kieu,Nhóm C
+514,Huyen_141.MOV,Buồn,huyen,Nhóm B
+515,Huyen_70.MOV,Buồn,huyen,Nhóm B
+516,Huyen_142.MOV,Buồn,huyen,Nhóm B
+517,Kiều_119.MOV,Buồn,kieu,Nhóm B
+518,Kiều_102.MOV,Tạm biệt,kieu,Nhóm A
+519,Thu_46.mov,Tạm biệt,thu,Nhóm A
+520,Huyen_228.MOV,Tạm biệt,huyen,Nhóm A
+521,Huyen_227.MOV,Tạm biệt,huyen,Nhóm A
+522,Kiều_176.MOV,Tạm biệt,kieu,Nhóm A
+523,Kiều_105.MOV,Tạm biệt,kieu,Nhóm D
+524,Thu_44.MOV,Tạm biệt,thu,Nhóm D
+525,Huyen_41.MOV,Tạm biệt,huyen,Nhóm D
+526,Kiều_106.MOV,Tạm biệt,kieu,Nhóm E
+527,Thu_118.MOV,Tạm biệt,thu,Nhóm E
+528,Thu_46.MOV,Tạm biệt,thu,Nhóm E
+529,Thu_45.MOV,Tạm biệt,thu,Nhóm C
+530,Huyen_231.MOV,Tạm biệt,huyen,Nhóm C
+531,Kiều_104.MOV,Tạm biệt,kieu,Nhóm C
+532,Huyen_232.MOV,Tạm biệt,huyen,Nhóm C
+533,Thu_47.mov,Tạm biệt,thu,Nhóm B
+534,Kiều_177.MOV,Tạm biệt,kieu,Nhóm B
+535,Huyen_229.MOV,Tạm biệt,huyen,Nhóm B
+536,Kiều_103.MOV,Tạm biệt,kieu,Nhóm B
+537,Huyen_230.MOV,Tạm biệt,huyen,Nhóm B
+538,Huyen_160.MOV,Đi,huyen,Nhóm A
+539,Huyen_161.MOV,Đi,huyen,Nhóm A
+540,Huyen_85.MOV,Đi,huyen,Nhóm A
+541,Kiều_137.MOV,Đi,kieu,Nhóm A
+542,Thu_99.mov,Đi,thu,Nhóm A
+543,Huyen_29.MOV,Đi,huyen,Nhóm D
+544,Kiều_141.MOV,Đi,kieu,Nhóm D
+545,Thu_98.mov,Đi,thu,Nhóm D
+546,Huyen_87.MOV,Đi,huyen,Nhóm E
+547,Thu_95.mov,Đi,thu,Nhóm E
+548,Kiều_140.MOV,Đi,kieu,Nhóm E
+549,Huyen_165.MOV,Đi,huyen,Nhóm C
+550,Huyen_86.MOV,Đi,huyen,Nhóm C
+551,Huyen_164.MOV,Đi,huyen,Nhóm C
+552,Kiều_139.MOV,Đi,kieu,Nhóm C
+553,Thu_96.mov,Đi,thu,Nhóm C
+554,Huyen_162.MOV,Đi,huyen,Nhóm B
+555,Huyen_86.MOV,Đi,huyen,Nhóm B
+556,Thu_97.mov,Đi,thu,Nhóm B
+557,Kiều_138.MOV,Đi,kieu,Nhóm B
+558,Huyen_163.MOV,Đi,huyen,Nhóm B
+559,Kiều_127.MOV,Học,kieu,Nhóm A
+560,Kiều_180.MOV,Học,kieu,Nhóm A
+561,Huyen_193.MOV,Học,huyen,Nhóm A
+562,Huyen_192.MOV,Học,huyen,Nhóm A
+563,Thu_94.MOV,Học,thu,Nhóm A
+564,Huyen_35.MOV,Học,huyen,Nhóm D
+565,Kiều_131.MOV,Học,kieu,Nhóm D
+566,Thu_91.MOV,Học,thu,Nhóm D
+567,Thu_92.MOV,Học,thu,Nhóm E
+568,Kiều_130.MOV,Học,kieu,Nhóm E
+569,Huyen_197.MOV,Học,huyen,Nhóm C
+570,Kiều_129.MOV,Học,kieu,Nhóm C
+571,Huyen_196.MOV,Học,huyen,Nhóm C
+572,Thu_90.MOV,Học,thu,Nhóm C
+573,Huyen_195.MOV,Học,huyen,Nhóm B
+574,Kiều_128.MOV,Học,kieu,Nhóm B
+575,Huyen_194.MOV,Học,huyen,Nhóm B
+576,Thu_93.MOV,Học,thu,Nhóm B
+577,Kiều_181.MOV,Học,kieu,Nhóm B
