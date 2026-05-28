@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Dataset
+data/raw_videos/
+
+# Models
+models/*.pt
+models/*.pth
+
+# OS
+.DS_Store
