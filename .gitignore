@@ -21,3 +21,12 @@ models/*.pth
 
 # OS
 .DS_Store
+# Video và landmark — quá nặng
+datasets/Videos/
+datasets/landmarks/
+
+# Model weights khác
+models/*.h5
+models/*.keras
+models/*.pkl
+datasets/processed/
