@@ -30,3 +30,9 @@ models/*.h5
 models/*.keras
 models/*.pkl
 datasets/processed/
+
+*.log
+
+*.egg-info
+
+datasets/dataset/

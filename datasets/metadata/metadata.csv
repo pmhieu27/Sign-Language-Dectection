@@ -1,0 +1,693 @@
+id,video_name,label,person,video_path
+1,91.MOV,Có,person_01,person_01\Có\91.MOV
+2,93.MOV,Có,person_01,person_01\Có\93.MOV
+3,95.MOV,Có,person_01,person_01\Có\95.MOV
+4,97.MOV,Có,person_01,person_01\Có\97.MOV
+5,98.MOV,Có,person_01,person_01\Có\98.MOV
+6,99.MOV,Có,person_01,person_01\Có\99.MOV
+7,yes_001.MOV,Có,person_01,person_01\Có\yes_001.MOV
+8,yes_002.MOV,Có,person_01,person_01\Có\yes_002.MOV
+9,yes_003.MOV,Có,person_01,person_01\Có\yes_003.MOV
+10,yes_004.MOV,Có,person_01,person_01\Có\yes_004.MOV
+11,yes_005.MOV,Có,person_01,person_01\Có\yes_005.MOV
+12,51.MOV,Cảm ơn,person_01,person_01\Cảm ơn\51.MOV
+13,54.MOV,Cảm ơn,person_01,person_01\Cảm ơn\54.MOV
+14,56.MOV,Cảm ơn,person_01,person_01\Cảm ơn\56.MOV
+15,57.MOV,Cảm ơn,person_01,person_01\Cảm ơn\57.MOV
+16,58.MOV,Cảm ơn,person_01,person_01\Cảm ơn\58.MOV
+17,thanks_001.MOV,Cảm ơn,person_01,person_01\Cảm ơn\thanks_001.MOV
+18,thanks_002.MOV,Cảm ơn,person_01,person_01\Cảm ơn\thanks_002.MOV
+19,thanks_003.MOV,Cảm ơn,person_01,person_01\Cảm ơn\thanks_003.MOV
+20,thanks_004.MOV,Cảm ơn,person_01,person_01\Cảm ơn\thanks_004.MOV
+21,thanks_005.MOV,Cảm ơn,person_01,person_01\Cảm ơn\thanks_005.MOV
+22,71.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\71.MOV
+23,72.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\72.MOV
+24,73.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\73.MOV
+25,74.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\74.MOV
+26,75.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\75.MOV
+27,76.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\76.MOV
+28,77.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\77.MOV
+29,78.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\78.MOV
+30,79.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\79.MOV
+578,7912585665651.mp4,Hạnh phúc,person_01,person_01\Hạnh phúc\7912585665651.mp4
+579,7912585726327.mp4,Hạnh phúc,person_01,person_01\Hạnh phúc\7912585726327.mp4
+31,80.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\80.MOV
+32,happy_001.MOV,Hạnh phúc,person_01,person_01\Hạnh phúc\happy_001.MOV
+33,41.MOV,Không,person_01,person_01\Không\41.MOV
+34,42.MOV,Không,person_01,person_01\Không\42.MOV
+35,43.MOV,Không,person_01,person_01\Không\43.MOV
+36,44.MOV,Không,person_01,person_01\Không\44.MOV
+37,45.MOV,Không,person_01,person_01\Không\45.MOV
+38,46.MOV,Không,person_01,person_01\Không\46.MOV
+39,47.MOV,Không,person_01,person_01\Không\47.MOV
+40,48.MOV,Không,person_01,person_01\Không\48.MOV
+41,49.MOV,Không,person_01,person_01\Không\49.MOV
+42,50.MOV,Không,person_01,person_01\Không\50.MOV
+580,7912585767155.mp4,Không,person_01,person_01\Không\7912585767155.mp4
+581,7912585850011.mp4,Không,person_01,person_01\Không\7912585850011.mp4
+43,no_001.MOV,Không,person_01,person_01\Không\no_001.MOV
+582,7912585442972.mp4,Tôi,person_01,person_01\Tôi\7912585442972.mp4
+583,7912585609868.mp4,Tôi,person_01,person_01\Tôi\7912585609868.mp4
+44,81.MOV,Tôi,person_01,person_01\Tôi\81.MOV
+45,82.MOV,Tôi,person_01,person_01\Tôi\82.MOV
+46,83.MOV,Tôi,person_01,person_01\Tôi\83.MOV
+47,84.MOV,Tôi,person_01,person_01\Tôi\84.MOV
+48,85.MOV,Tôi,person_01,person_01\Tôi\85.MOV
+49,86.MOV,Tôi,person_01,person_01\Tôi\86.MOV
+50,87.MOV,Tôi,person_01,person_01\Tôi\87.MOV
+51,88.MOV,Tôi,person_01,person_01\Tôi\88.MOV
+52,89.MOV,Tôi,person_01,person_01\Tôi\89.MOV
+53,90.MOV,Tôi,person_01,person_01\Tôi\90.MOV
+54,me_001.MOV,Tôi,person_01,person_01\Tôi\me_001.MOV
+55,01.MOV,Tạm biệt,person_01,person_01\Tạm biệt\01.MOV
+56,02.MOV,Tạm biệt,person_01,person_01\Tạm biệt\02.MOV
+57,03.MOV,Tạm biệt,person_01,person_01\Tạm biệt\03.MOV
+58,04.MOV,Tạm biệt,person_01,person_01\Tạm biệt\04.MOV
+59,05.MOV,Tạm biệt,person_01,person_01\Tạm biệt\05.MOV
+60,06.MOV,Tạm biệt,person_01,person_01\Tạm biệt\06.MOV
+61,07.MOV,Tạm biệt,person_01,person_01\Tạm biệt\07.MOV
+62,08.MOV,Tạm biệt,person_01,person_01\Tạm biệt\08.MOV
+63,09.MOV,Tạm biệt,person_01,person_01\Tạm biệt\09.MOV
+64,10.MOV,Tạm biệt,person_01,person_01\Tạm biệt\10.MOV
+584,7912585073522.mp4,Tạm biệt,person_01,person_01\Tạm biệt\7912585073522.mp4
+585,7912585260583.mp4,Tạm biệt,person_01,person_01\Tạm biệt\7912585260583.mp4
+65,goodbye_001.MOV,Tạm biệt,person_01,person_01\Tạm biệt\goodbye_001.MOV
+66,31.MOV,Uống,person_01,person_01\Uống\31.MOV
+67,32.MOV,Uống,person_01,person_01\Uống\32.MOV
+68,33.MOV,Uống,person_01,person_01\Uống\33.MOV
+69,34.MOV,Uống,person_01,person_01\Uống\34.MOV
+70,35.MOV,Uống,person_01,person_01\Uống\35.MOV
+71,36.MOV,Uống,person_01,person_01\Uống\36.MOV
+72,37.MOV,Uống,person_01,person_01\Uống\37.MOV
+73,38.MOV,Uống,person_01,person_01\Uống\38.MOV
+74,39.MOV,Uống,person_01,person_01\Uống\39.MOV
+75,40.MOV,Uống,person_01,person_01\Uống\40.MOV
+586,7912585401111.mp4,Uống,person_01,person_01\Uống\7912585401111.mp4
+587,7912585513514.mp4,Uống,person_01,person_01\Uống\7912585513514.mp4
+76,drink_001.MOV,Uống,person_01,person_01\Uống\drink_001.MOV
+77,11.MOV,Xin chào,person_01,person_01\Xin chào\11.MOV
+78,12.MOV,Xin chào,person_01,person_01\Xin chào\12.MOV
+79,13.MOV,Xin chào,person_01,person_01\Xin chào\13.MOV
+80,14.MOV,Xin chào,person_01,person_01\Xin chào\14.MOV
+81,15.MOV,Xin chào,person_01,person_01\Xin chào\15.MOV
+82,16.MOV,Xin chào,person_01,person_01\Xin chào\16.MOV
+83,17.MOV,Xin chào,person_01,person_01\Xin chào\17.MOV
+84,18.MOV,Xin chào,person_01,person_01\Xin chào\18.MOV
+85,19.MOV,Xin chào,person_01,person_01\Xin chào\19.MOV
+86,20.MOV,Xin chào,person_01,person_01\Xin chào\20.MOV
+588,7912584984887.mp4,Xin chào,person_01,person_01\Xin chào\7912584984887.mp4
+589,7912585282669.mp4,Xin chào,person_01,person_01\Xin chào\7912585282669.mp4
+87,hello_001.MOV,Xin chào,person_01,person_01\Xin chào\hello_001.MOV
+88,21.MOV,Xin lỗi,person_01,person_01\Xin lỗi\21.MOV
+89,22.MOV,Xin lỗi,person_01,person_01\Xin lỗi\22.MOV
+90,23.MOV,Xin lỗi,person_01,person_01\Xin lỗi\23.MOV
+91,24.MOV,Xin lỗi,person_01,person_01\Xin lỗi\24.MOV
+92,25.MOV,Xin lỗi,person_01,person_01\Xin lỗi\25.MOV
+93,26.MOV,Xin lỗi,person_01,person_01\Xin lỗi\26.MOV
+94,27.MOV,Xin lỗi,person_01,person_01\Xin lỗi\27.MOV
+95,28.MOV,Xin lỗi,person_01,person_01\Xin lỗi\28.MOV
+96,29.MOV,Xin lỗi,person_01,person_01\Xin lỗi\29.MOV
+97,30.MOV,Xin lỗi,person_01,person_01\Xin lỗi\30.MOV
+590,7912585102713.mp4,Xin lỗi,person_01,person_01\Xin lỗi\7912585102713.mp4
+591,7912585116783.mp4,Xin lỗi,person_01,person_01\Xin lỗi\7912585116783.mp4
+98,sorry_001.MOV,Xin lỗi,person_01,person_01\Xin lỗi\sorry_001.MOV
+99,61.MOV,Ăn,person_01,person_01\Ăn\61.MOV
+100,62.MOV,Ăn,person_01,person_01\Ăn\62.MOV
+101,63.MOV,Ăn,person_01,person_01\Ăn\63.MOV
+102,64.MOV,Ăn,person_01,person_01\Ăn\64.MOV
+103,65.MOV,Ăn,person_01,person_01\Ăn\65.MOV
+104,66.MOV,Ăn,person_01,person_01\Ăn\66.MOV
+105,67.MOV,Ăn,person_01,person_01\Ăn\67.MOV
+106,68.MOV,Ăn,person_01,person_01\Ăn\68.MOV
+107,69.MOV,Ăn,person_01,person_01\Ăn\69.MOV
+108,70.MOV,Ăn,person_01,person_01\Ăn\70.MOV
+592,7912585060438.mp4,Ăn,person_01,person_01\Ăn\7912585060438.mp4
+593,7912585153724.mp4,Ăn,person_01,person_01\Ăn\7912585153724.mp4
+109,eat_001.MOV,Ăn,person_01,person_01\Ăn\eat_001.MOV
+110,eat_002.MOV,Ăn,person_01,person_01\Ăn\eat_002.MOV
+111,eat_003.MOV,Ăn,person_01,person_01\Ăn\eat_003.MOV
+112,eat_004.MOV,Ăn,person_01,person_01\Ăn\eat_004.MOV
+113,eat_005.MOV,Ăn,person_01,person_01\Ăn\eat_005.MOV
+114,IMG_7941.MOV,Có,person_02,person_02\Có\IMG_7941.MOV
+115,IMG_7942.MOV,Có,person_02,person_02\Có\IMG_7942.MOV
+116,IMG_7943.MOV,Có,person_02,person_02\Có\IMG_7943.MOV
+117,IMG_7944.MOV,Có,person_02,person_02\Có\IMG_7944.MOV
+118,IMG_7945.MOV,Có,person_02,person_02\Có\IMG_7945.MOV
+119,IMG_7946.MOV,Có,person_02,person_02\Có\IMG_7946.MOV
+120,IMG_7947.MOV,Có,person_02,person_02\Có\IMG_7947.MOV
+121,IMG_7948.MOV,Có,person_02,person_02\Có\IMG_7948.MOV
+122,IMG_7949.MOV,Có,person_02,person_02\Có\IMG_7949.MOV
+123,a.mov,Có,person_02,person_02\Có\a.mov
+124,yes_001.mp4,Có,person_02,person_02\Có\yes_001.mp4
+125,yes_002.mp4,Có,person_02,person_02\Có\yes_002.mp4
+126,yes_003.mp4,Có,person_02,person_02\Có\yes_003.mp4
+127,yes_004.mp4,Có,person_02,person_02\Có\yes_004.mp4
+128,yes_005.mp4,Có,person_02,person_02\Có\yes_005.mp4
+129,IMG_7921.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7921.MOV
+130,IMG_7922.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7922.MOV
+131,IMG_7923.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7923.MOV
+132,IMG_7924.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7924.MOV
+133,IMG_7925.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7925.MOV
+134,IMG_7926.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7926.MOV
+135,IMG_7927.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7927.MOV
+136,IMG_7928.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7928.MOV
+137,IMG_7929.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7929.MOV
+138,IMG_7930.MOV,Cảm ơn,person_02,person_02\Cảm ơn\IMG_7930.MOV
+139,thanks_001.mp4,Cảm ơn,person_02,person_02\Cảm ơn\thanks_001.mp4
+140,thanks_002.mp4,Cảm ơn,person_02,person_02\Cảm ơn\thanks_002.mp4
+141,thanks_003.mp4,Cảm ơn,person_02,person_02\Cảm ơn\thanks_003.mp4
+142,thanks_004.MOV,Cảm ơn,person_02,person_02\Cảm ơn\thanks_004.MOV
+143,thanks_005.MOV,Cảm ơn,person_02,person_02\Cảm ơn\thanks_005.MOV
+144,IMG_7991.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7991.MOV
+145,IMG_7992.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7992.MOV
+146,IMG_7993.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7993.MOV
+147,IMG_7994.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7994.MOV
+148,IMG_7995.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7995.MOV
+149,IMG_7996.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7996.MOV
+150,IMG_7997.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7997.MOV
+151,IMG_7998.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7998.MOV
+152,IMG_7999.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_7999.MOV
+153,IMG_8001.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\IMG_8001.MOV
+154,happy_001.mp4,Hạnh phúc,person_02,person_02\Hạnh phúc\happy_001.mp4
+155,happy_002.mp4,Hạnh phúc,person_02,person_02\Hạnh phúc\happy_002.mp4
+156,happy_003.mp4,Hạnh phúc,person_02,person_02\Hạnh phúc\happy_003.mp4
+157,happy_004.MOV,Hạnh phúc,person_02,person_02\Hạnh phúc\happy_004.MOV
+158,IMG_7950.MOV,Không,person_02,person_02\Không\IMG_7950.MOV
+159,IMG_7953.MOV,Không,person_02,person_02\Không\IMG_7953.MOV
+160,IMG_7958.MOV,Không,person_02,person_02\Không\IMG_7958.MOV
+161,IMG_7959.MOV,Không,person_02,person_02\Không\IMG_7959.MOV
+162,no_001.mp4,Không,person_02,person_02\Không\no_001.mp4
+163,no_002.mp4,Không,person_02,person_02\Không\no_002.mp4
+164,no_003.mp4,Không,person_02,person_02\Không\no_003.mp4
+165,no_004.mp4,Không,person_02,person_02\Không\no_004.mp4
+166,no_005.mp4,Không,person_02,person_02\Không\no_005.mp4
+167,IMG_7981.MOV,Tôi,person_02,person_02\Tôi\IMG_7981.MOV
+168,IMG_7982.MOV,Tôi,person_02,person_02\Tôi\IMG_7982.MOV
+169,IMG_7983.MOV,Tôi,person_02,person_02\Tôi\IMG_7983.MOV
+170,IMG_7984.MOV,Tôi,person_02,person_02\Tôi\IMG_7984.MOV
+171,IMG_7985.MOV,Tôi,person_02,person_02\Tôi\IMG_7985.MOV
+172,IMG_7986.MOV,Tôi,person_02,person_02\Tôi\IMG_7986.MOV
+173,IMG_7987.MOV,Tôi,person_02,person_02\Tôi\IMG_7987.MOV
+174,IMG_7988.MOV,Tôi,person_02,person_02\Tôi\IMG_7988.MOV
+175,IMG_7989.MOV,Tôi,person_02,person_02\Tôi\IMG_7989.MOV
+176,IMG_7990.MOV,Tôi,person_02,person_02\Tôi\IMG_7990.MOV
+177,me_001.MOV,Tôi,person_02,person_02\Tôi\me_001.MOV
+178,me_002.MOV,Tôi,person_02,person_02\Tôi\me_002.MOV
+179,me_003.MOV,Tôi,person_02,person_02\Tôi\me_003.MOV
+180,me_004.MOV,Tôi,person_02,person_02\Tôi\me_004.MOV
+181,me_005.MOV,Tôi,person_02,person_02\Tôi\me_005.MOV
+182,IMG_7910.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7910.MOV
+183,IMG_7911.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7911.MOV
+184,IMG_7912.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7912.MOV
+185,IMG_7914.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7914.MOV
+186,IMG_7915.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7915.MOV
+187,IMG_7916.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7916.MOV
+188,IMG_7917.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7917.MOV
+189,IMG_7918.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7918.MOV
+190,IMG_7919.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7919.MOV
+191,IMG_7920.MOV,Tạm biệt,person_02,person_02\Tạm biệt\IMG_7920.MOV
+192,goodbye_001.MOV,Tạm biệt,person_02,person_02\Tạm biệt\goodbye_001.MOV
+193,goodbye_002.MOV,Tạm biệt,person_02,person_02\Tạm biệt\goodbye_002.MOV
+194,goodbye_003.MOV,Tạm biệt,person_02,person_02\Tạm biệt\goodbye_003.MOV
+195,goodbye_004.MOV,Tạm biệt,person_02,person_02\Tạm biệt\goodbye_004.MOV
+196,goodbye_005.MOV,Tạm biệt,person_02,person_02\Tạm biệt\goodbye_005.MOV
+197,IMG_7971.MOV,Uống,person_02,person_02\Uống\IMG_7971.MOV
+198,IMG_7972.MOV,Uống,person_02,person_02\Uống\IMG_7972.MOV
+199,IMG_7973.MOV,Uống,person_02,person_02\Uống\IMG_7973.MOV
+200,IMG_7974.MOV,Uống,person_02,person_02\Uống\IMG_7974.MOV
+201,IMG_7975.MOV,Uống,person_02,person_02\Uống\IMG_7975.MOV
+202,IMG_7976.MOV,Uống,person_02,person_02\Uống\IMG_7976.MOV
+203,IMG_7977.MOV,Uống,person_02,person_02\Uống\IMG_7977.MOV
+204,IMG_7978.MOV,Uống,person_02,person_02\Uống\IMG_7978.MOV
+205,IMG_7979.MOV,Uống,person_02,person_02\Uống\IMG_7979.MOV
+206,IMG_7980.MOV,Uống,person_02,person_02\Uống\IMG_7980.MOV
+207,drink_001.MOV,Uống,person_02,person_02\Uống\drink_001.MOV
+208,drink_002.MOV,Uống,person_02,person_02\Uống\drink_002.MOV
+209,drink_003.mp4,Uống,person_02,person_02\Uống\drink_003.mp4
+210,drink_004.mp4,Uống,person_02,person_02\Uống\drink_004.mp4
+211,drink_005.mp4,Uống,person_02,person_02\Uống\drink_005.mp4
+212,IMG_7900.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7900.MOV
+213,IMG_7901.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7901.MOV
+214,IMG_7902.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7902.MOV
+215,IMG_7903.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7903.MOV
+216,IMG_7904.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7904.MOV
+217,IMG_7905.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7905.MOV
+218,IMG_7906.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7906.MOV
+219,IMG_7907.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7907.MOV
+220,IMG_7908.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7908.MOV
+221,IMG_7909.MOV,Xin chào,person_02,person_02\Xin chào\IMG_7909.MOV
+222,hello_001.mp4,Xin chào,person_02,person_02\Xin chào\hello_001.mp4
+223,hello_002.mp4,Xin chào,person_02,person_02\Xin chào\hello_002.mp4
+224,hello_003.mp4,Xin chào,person_02,person_02\Xin chào\hello_003.mp4
+225,hello_004.mp4,Xin chào,person_02,person_02\Xin chào\hello_004.mp4
+226,hello_005.MOV,Xin chào,person_02,person_02\Xin chào\hello_005.MOV
+227,IMG_7931.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7931.MOV
+228,IMG_7932.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7932.MOV
+229,IMG_7933.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7933.MOV
+230,IMG_7934.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7934.MOV
+231,IMG_7935.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7935.MOV
+232,IMG_7936.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7936.MOV
+233,IMG_7937.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7937.MOV
+234,IMG_7938.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7938.MOV
+235,IMG_7939.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7939.MOV
+236,IMG_7940.MOV,Xin lỗi,person_02,person_02\Xin lỗi\IMG_7940.MOV
+237,sorry_001.mp4,Xin lỗi,person_02,person_02\Xin lỗi\sorry_001.mp4
+238,sorry_002.mp4,Xin lỗi,person_02,person_02\Xin lỗi\sorry_002.mp4
+239,sorry_003.mp4,Xin lỗi,person_02,person_02\Xin lỗi\sorry_003.mp4
+240,sorry_004.MOV,Xin lỗi,person_02,person_02\Xin lỗi\sorry_004.MOV
+241,sorry_005.MOV,Xin lỗi,person_02,person_02\Xin lỗi\sorry_005.MOV
+242,IMG_7961.MOV,Ăn,person_02,person_02\Ăn\IMG_7961.MOV
+243,IMG_7962.MOV,Ăn,person_02,person_02\Ăn\IMG_7962.MOV
+244,IMG_7963.MOV,Ăn,person_02,person_02\Ăn\IMG_7963.MOV
+245,IMG_7964.MOV,Ăn,person_02,person_02\Ăn\IMG_7964.MOV
+246,IMG_7965.MOV,Ăn,person_02,person_02\Ăn\IMG_7965.MOV
+247,IMG_7967.MOV,Ăn,person_02,person_02\Ăn\IMG_7967.MOV
+248,IMG_7968.MOV,Ăn,person_02,person_02\Ăn\IMG_7968.MOV
+249,IMG_7969.MOV,Ăn,person_02,person_02\Ăn\IMG_7969.MOV
+250,eat_001.mp4,Ăn,person_02,person_02\Ăn\eat_001.mp4
+251,eat_002.mp4,Ăn,person_02,person_02\Ăn\eat_002.mp4
+252,eat_003.mp4,Ăn,person_02,person_02\Ăn\eat_003.mp4
+253,eat_004.MOV,Ăn,person_02,person_02\Ăn\eat_004.MOV
+254,eat_005.MOV,Ăn,person_02,person_02\Ăn\eat_005.MOV
+594,7912629543939.mp4,Có,person_03,person_03\Có\7912629543939.mp4
+595,7912629986090.mp4,Có,person_03,person_03\Có\7912629986090.mp4
+255,IMG_2359.MOV,Có,person_03,person_03\Có\IMG_2359.MOV
+256,IMG_2360.MOV,Có,person_03,person_03\Có\IMG_2360.MOV
+257,IMG_2361.MOV,Có,person_03,person_03\Có\IMG_2361.MOV
+258,IMG_2362.MOV,Có,person_03,person_03\Có\IMG_2362.MOV
+259,IMG_2363.MOV,Có,person_03,person_03\Có\IMG_2363.MOV
+260,IMG_2364.MOV,Có,person_03,person_03\Có\IMG_2364.MOV
+261,IMG_2365.MOV,Có,person_03,person_03\Có\IMG_2365.MOV
+262,IMG_2366.MOV,Có,person_03,person_03\Có\IMG_2366.MOV
+263,IMG_2367.MOV,Có,person_03,person_03\Có\IMG_2367.MOV
+264,IMG_2368.MOV,Có,person_03,person_03\Có\IMG_2368.MOV
+265,IMG_2369.MOV,Có,person_03,person_03\Có\IMG_2369.MOV
+266,yes_001.MOV,Có,person_03,person_03\Có\yes_001.MOV
+267,yes_002.MOV,Có,person_03,person_03\Có\yes_002.MOV
+268,yes_003.MOV,Có,person_03,person_03\Có\yes_003.MOV
+596,7912627952282.mp4,Cảm ơn,person_03,person_03\Cảm ơn\7912627952282.mp4
+597,7912628227788.mp4,Cảm ơn,person_03,person_03\Cảm ơn\7912628227788.mp4
+269,IMG_2345.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2345.MOV
+270,IMG_2346.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2346.MOV
+271,IMG_2347.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2347.MOV
+272,IMG_2348.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2348.MOV
+273,IMG_2349.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2349.MOV
+274,IMG_2350.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2350.MOV
+275,IMG_2351.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2351.MOV
+276,IMG_2352.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2352.MOV
+277,IMG_2353.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2353.MOV
+278,IMG_2354.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2354.MOV
+279,IMG_2355.MOV,Cảm ơn,person_03,person_03\Cảm ơn\IMG_2355.MOV
+280,thanks_001.MOV,Cảm ơn,person_03,person_03\Cảm ơn\thanks_001.MOV
+281,thanks_002.MOV,Cảm ơn,person_03,person_03\Cảm ơn\thanks_002.MOV
+282,thanks_003.mov,Cảm ơn,person_03,person_03\Cảm ơn\thanks_003.mov
+598,7912636251231.mp4,Hạnh phúc,person_03,person_03\Hạnh phúc\7912636251231.mp4
+283,IMG_2371.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2371.MOV
+284,IMG_2372.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2372.MOV
+285,IMG_2373.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2373.MOV
+286,IMG_2374.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2374.MOV
+287,IMG_2375.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2375.MOV
+288,IMG_2376.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2376.MOV
+289,IMG_2377.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2377.MOV
+290,IMG_2378.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2378.MOV
+291,IMG_2379.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2379.MOV
+292,IMG_2380.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2380.MOV
+293,IMG_2381.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\IMG_2381.MOV
+294,help_001.MOV,Hạnh phúc,person_03,person_03\Hạnh phúc\help_001.MOV
+295,help_002.mov,Hạnh phúc,person_03,person_03\Hạnh phúc\help_002.mov
+296,help_003.mov,Hạnh phúc,person_03,person_03\Hạnh phúc\help_003.mov
+297,help_004.mov,Hạnh phúc,person_03,person_03\Hạnh phúc\help_004.mov
+298,help_005.mov,Hạnh phúc,person_03,person_03\Hạnh phúc\help_005.mov
+299,help_006.mov,Hạnh phúc,person_03,person_03\Hạnh phúc\help_006.mov
+599,7912633327033.mp4,Không,person_03,person_03\Không\7912633327033.mp4
+600,7912633427660.mp4,Không,person_03,person_03\Không\7912633427660.mp4
+300,IMG_2384(1).mov,Không,person_03,person_03\Không\IMG_2384(1).mov
+301,IMG_2384(2).mov,Không,person_03,person_03\Không\IMG_2384(2).mov
+302,IMG_2384(3).mov,Không,person_03,person_03\Không\IMG_2384(3).mov
+303,IMG_2384(4).mov,Không,person_03,person_03\Không\IMG_2384(4).mov
+304,IMG_2384(5).mov,Không,person_03,person_03\Không\IMG_2384(5).mov
+305,IMG_2384(6).mov,Không,person_03,person_03\Không\IMG_2384(6).mov
+306,IMG_2384(7).mov,Không,person_03,person_03\Không\IMG_2384(7).mov
+307,IMG_2384(8).mov,Không,person_03,person_03\Không\IMG_2384(8).mov
+308,IMG_2384(9).mov,Không,person_03,person_03\Không\IMG_2384(9).mov
+309,IMG_2384.mov,Không,person_03,person_03\Không\IMG_2384.mov
+310,no_001.MOV,Không,person_03,person_03\Không\no_001.MOV
+311,no_002.MOV,Không,person_03,person_03\Không\no_002.MOV
+312,no_003.MOV,Không,person_03,person_03\Không\no_003.MOV
+601,7912636004802.mp4,Tôi,person_03,person_03\Tôi\7912636004802.mp4
+313,IMG_2385(1).mov,Tôi,person_03,person_03\Tôi\IMG_2385(1).mov
+314,IMG_2385(2).mov,Tôi,person_03,person_03\Tôi\IMG_2385(2).mov
+315,IMG_2385(3).mov,Tôi,person_03,person_03\Tôi\IMG_2385(3).mov
+316,IMG_2385(4).mov,Tôi,person_03,person_03\Tôi\IMG_2385(4).mov
+317,IMG_2385(5).mov,Tôi,person_03,person_03\Tôi\IMG_2385(5).mov
+318,IMG_2385(6).mov,Tôi,person_03,person_03\Tôi\IMG_2385(6).mov
+319,IMG_2385(7).mov,Tôi,person_03,person_03\Tôi\IMG_2385(7).mov
+320,IMG_2385(8).mov,Tôi,person_03,person_03\Tôi\IMG_2385(8).mov
+321,IMG_2385(9).mov,Tôi,person_03,person_03\Tôi\IMG_2385(9).mov
+322,IMG_2385.mov,Tôi,person_03,person_03\Tôi\IMG_2385.mov
+323,me_001.MOV,Tôi,person_03,person_03\Tôi\me_001.MOV
+324,me_002.MOV,Tôi,person_03,person_03\Tôi\me_002.MOV
+325,me_003.MOV,Tôi,person_03,person_03\Tôi\me_003.MOV
+326,me_004.MOV,Tôi,person_03,person_03\Tôi\me_004.MOV
+327,me_005.MOV,Tôi,person_03,person_03\Tôi\me_005.MOV
+328,goodbye_001.MOV,Tạm biệt,person_03,person_03\Tạm biệt\goodbye_001.MOV
+329,goodbye_002.MOV,Tạm biệt,person_03,person_03\Tạm biệt\goodbye_002.MOV
+330,goodbye_003.MOV,Tạm biệt,person_03,person_03\Tạm biệt\goodbye_003.MOV
+331,goodbye_004.mov,Tạm biệt,person_03,person_03\Tạm biệt\goodbye_004.mov
+332,goodbye_005.MOV,Tạm biệt,person_03,person_03\Tạm biệt\goodbye_005.MOV
+333,IMG_2386(1).mov,Uống,person_03,person_03\Uống\IMG_2386(1).mov
+334,IMG_2386(2).mov,Uống,person_03,person_03\Uống\IMG_2386(2).mov
+335,IMG_2386(3).mov,Uống,person_03,person_03\Uống\IMG_2386(3).mov
+336,IMG_2386(4).mov,Uống,person_03,person_03\Uống\IMG_2386(4).mov
+337,IMG_2386(5).mov,Uống,person_03,person_03\Uống\IMG_2386(5).mov
+338,IMG_2386(6).mov,Uống,person_03,person_03\Uống\IMG_2386(6).mov
+339,IMG_2386(7).mov,Uống,person_03,person_03\Uống\IMG_2386(7).mov
+340,IMG_2386(8).mov,Uống,person_03,person_03\Uống\IMG_2386(8).mov
+341,IMG_2386(9).mov,Uống,person_03,person_03\Uống\IMG_2386(9).mov
+342,IMG_2386.mov,Uống,person_03,person_03\Uống\IMG_2386.mov
+343,drink_001.MOV,Uống,person_03,person_03\Uống\drink_001.MOV
+344,drink_002.MOV,Uống,person_03,person_03\Uống\drink_002.MOV
+345,drink_003.MOV,Uống,person_03,person_03\Uống\drink_003.MOV
+346,IMG_2387(1).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(1).mov
+347,IMG_2387(2).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(2).mov
+348,IMG_2387(3).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(3).mov
+349,IMG_2387(4).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(4).mov
+350,IMG_2387(5).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(5).mov
+351,IMG_2387(6).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(6).mov
+352,IMG_2387(7).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(7).mov
+353,IMG_2387(8).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(8).mov
+354,IMG_2387(9).mov,Xin chào,person_03,person_03\Xin chào\IMG_2387(9).mov
+355,IMG_2387.mov,Xin chào,person_03,person_03\Xin chào\IMG_2387.mov
+356,hello_001.mov,Xin chào,person_03,person_03\Xin chào\hello_001.mov
+357,hello_002.mov,Xin chào,person_03,person_03\Xin chào\hello_002.mov
+358,hello_003.mov,Xin chào,person_03,person_03\Xin chào\hello_003.mov
+359,hello_004.mov,Xin chào,person_03,person_03\Xin chào\hello_004.mov
+360,hello_005.mov,Xin chào,person_03,person_03\Xin chào\hello_005.mov
+361,hello_006.MOV,Xin chào,person_03,person_03\Xin chào\hello_006.MOV
+362,hello_007.MOV,Xin chào,person_03,person_03\Xin chào\hello_007.MOV
+363,IMG_2388(1).MOV,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(1).MOV
+364,IMG_2388(2).mov,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(2).mov
+365,IMG_2388(3).mov,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(3).mov
+366,IMG_2388(4).mov,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(4).mov
+367,IMG_2388(5).mov,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(5).mov
+368,IMG_2388(6).mov,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(6).mov
+369,IMG_2388(7).mov,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(7).mov
+370,IMG_2388(8).mov,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(8).mov
+371,IMG_2388(9).mov,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388(9).mov
+372,IMG_2388.MOV,Xin lỗi,person_03,person_03\Xin lỗi\IMG_2388.MOV
+373,sorry_001.MOV,Xin lỗi,person_03,person_03\Xin lỗi\sorry_001.MOV
+374,sorry_002.MOV,Xin lỗi,person_03,person_03\Xin lỗi\sorry_002.MOV
+375,sorry_003.mov,Xin lỗi,person_03,person_03\Xin lỗi\sorry_003.mov
+376,sorry_004.MOV,Xin lỗi,person_03,person_03\Xin lỗi\sorry_004.MOV
+602,7912624242948.mp4,Ăn,person_03,person_03\Ăn\7912624242948.mp4
+603,7912624596005.mp4,Ăn,person_03,person_03\Ăn\7912624596005.mp4
+377,IMG_2329.MOV,Ăn,person_03,person_03\Ăn\IMG_2329.MOV
+378,IMG_2332.MOV,Ăn,person_03,person_03\Ăn\IMG_2332.MOV
+379,IMG_2333.MOV,Ăn,person_03,person_03\Ăn\IMG_2333.MOV
+380,IMG_2334.MOV,Ăn,person_03,person_03\Ăn\IMG_2334.MOV
+381,IMG_2335.MOV,Ăn,person_03,person_03\Ăn\IMG_2335.MOV
+382,IMG_2338.MOV,Ăn,person_03,person_03\Ăn\IMG_2338.MOV
+383,IMG_2339.MOV,Ăn,person_03,person_03\Ăn\IMG_2339.MOV
+384,IMG_2340.MOV,Ăn,person_03,person_03\Ăn\IMG_2340.MOV
+385,IMG_2341.MOV,Ăn,person_03,person_03\Ăn\IMG_2341.MOV
+386,IMG_2342.MOV,Ăn,person_03,person_03\Ăn\IMG_2342.MOV
+387,eat_001.MOV,Ăn,person_03,person_03\Ăn\eat_001.MOV
+388,eat_002.MOV,Ăn,person_03,person_03\Ăn\eat_002.MOV
+389,eat_003.MOV,Ăn,person_03,person_03\Ăn\eat_003.MOV
+390,eat_004.MOV,Ăn,person_03,person_03\Ăn\eat_004.MOV
+391,yes_001.MOV,Có,person_04,person_04\Có\yes_001.MOV
+392,yes_002.MOV,Có,person_04,person_04\Có\yes_002.MOV
+393,yes_003.MOV,Có,person_04,person_04\Có\yes_003.MOV
+394,thanks_001.MOV,Cảm ơn,person_04,person_04\Cảm ơn\thanks_001.MOV
+395,thanks_002.MOV,Cảm ơn,person_04,person_04\Cảm ơn\thanks_002.MOV
+396,happy_001.MOV,Hạnh phúc,person_04,person_04\Hạnh phúc\happy_001.MOV
+397,happy_002.MOV,Hạnh phúc,person_04,person_04\Hạnh phúc\happy_002.MOV
+398,happy_003.MOV,Hạnh phúc,person_04,person_04\Hạnh phúc\happy_003.MOV
+399,no_001.MOV,Không,person_04,person_04\Không\no_001.MOV
+400,me_001.MOV,Tôi,person_04,person_04\Tôi\me_001.MOV
+401,me_002.MOV,Tôi,person_04,person_04\Tôi\me_002.MOV
+402,me_003.MOV,Tôi,person_04,person_04\Tôi\me_003.MOV
+403,goodbye_001.MOV,Tạm biệt,person_04,person_04\Tạm biệt\goodbye_001.MOV
+404,goodbye_002.MOV,Tạm biệt,person_04,person_04\Tạm biệt\goodbye_002.MOV
+405,goodbye_003.MOV,Tạm biệt,person_04,person_04\Tạm biệt\goodbye_003.MOV
+406,drink_001.MOV,Uống,person_04,person_04\Uống\drink_001.MOV
+407,drink_002.MOV,Uống,person_04,person_04\Uống\drink_002.MOV
+408,drink_003.MOV,Uống,person_04,person_04\Uống\drink_003.MOV
+409,hello_001.MOV,Xin chào,person_04,person_04\Xin chào\hello_001.MOV
+410,hello_002.MOV,Xin chào,person_04,person_04\Xin chào\hello_002.MOV
+411,hello_003.MOV,Xin chào,person_04,person_04\Xin chào\hello_003.MOV
+412,sorry_001.MOV,Xin lỗi,person_04,person_04\Xin lỗi\sorry_001.MOV
+413,sorry_002.MOV,Xin lỗi,person_04,person_04\Xin lỗi\sorry_002.MOV
+414,sorry_003.MOV,Xin lỗi,person_04,person_04\Xin lỗi\sorry_003.MOV
+415,eat_001.MOV,Ăn,person_04,person_04\Ăn\eat_001.MOV
+416,eat_002.MOV,Ăn,person_04,person_04\Ăn\eat_002.MOV
+417,eat_003.MOV,Ăn,person_04,person_04\Ăn\eat_003.MOV
+418,yes_001.MOV,Có,person_05,person_05\Có\yes_001.MOV
+419,yes_002.MOV,Có,person_05,person_05\Có\yes_002.MOV
+420,yes_003.MOV,Có,person_05,person_05\Có\yes_003.MOV
+421,thanks_001.MOV,Cảm ơn,person_05,person_05\Cảm ơn\thanks_001.MOV
+422,thanks_002.MOV,Cảm ơn,person_05,person_05\Cảm ơn\thanks_002.MOV
+423,happy_001.MOV,Hạnh phúc,person_05,person_05\Hạnh phúc\happy_001.MOV
+424,happy_002.MOV,Hạnh phúc,person_05,person_05\Hạnh phúc\happy_002.MOV
+425,no_001.MOV,Không,person_05,person_05\Không\no_001.MOV
+426,no_002.MOV,Không,person_05,person_05\Không\no_002.MOV
+427,no_003.MOV,Không,person_05,person_05\Không\no_003.MOV
+428,me_001.MOV,Tôi,person_05,person_05\Tôi\me_001.MOV
+429,me_002.MOV,Tôi,person_05,person_05\Tôi\me_002.MOV
+430,me_003.MOV,Tôi,person_05,person_05\Tôi\me_003.MOV
+431,01.MOV,Tạm biệt,person_05,person_05\Tạm biệt\01.MOV
+432,02.MOV,Tạm biệt,person_05,person_05\Tạm biệt\02.MOV
+433,03.MOV,Tạm biệt,person_05,person_05\Tạm biệt\03.MOV
+434,04.MOV,Tạm biệt,person_05,person_05\Tạm biệt\04.MOV
+435,05.MOV,Tạm biệt,person_05,person_05\Tạm biệt\05.MOV
+436,06.MOV,Tạm biệt,person_05,person_05\Tạm biệt\06.MOV
+437,07.MOV,Tạm biệt,person_05,person_05\Tạm biệt\07.MOV
+438,08.MOV,Tạm biệt,person_05,person_05\Tạm biệt\08.MOV
+439,09.MOV,Tạm biệt,person_05,person_05\Tạm biệt\09.MOV
+440,10.MOV,Tạm biệt,person_05,person_05\Tạm biệt\10.MOV
+441,goodbye_001.MOV,Tạm biệt,person_05,person_05\Tạm biệt\goodbye_001.MOV
+442,goodbye_002.MOV,Tạm biệt,person_05,person_05\Tạm biệt\goodbye_002.MOV
+443,goodbye_003.MOV,Tạm biệt,person_05,person_05\Tạm biệt\goodbye_003.MOV
+444,drink_001.MOV,Uống,person_05,person_05\Uống\drink_001.MOV
+445,drink_002.MOV,Uống,person_05,person_05\Uống\drink_002.MOV
+446,drink_003.MOV,Uống,person_05,person_05\Uống\drink_003.MOV
+447,hello_001.MOV,Xin chào,person_05,person_05\Xin chào\hello_001.MOV
+448,hello_002.MOV,Xin chào,person_05,person_05\Xin chào\hello_002.MOV
+449,01.MOV,Xin lỗi,person_05,person_05\Xin lỗi\01.MOV
+450,02.MOV,Xin lỗi,person_05,person_05\Xin lỗi\02.MOV
+451,03.MOV,Xin lỗi,person_05,person_05\Xin lỗi\03.MOV
+452,04.MOV,Xin lỗi,person_05,person_05\Xin lỗi\04.MOV
+453,05.MOV,Xin lỗi,person_05,person_05\Xin lỗi\05.MOV
+454,06.MOV,Xin lỗi,person_05,person_05\Xin lỗi\06.MOV
+455,07.MOV,Xin lỗi,person_05,person_05\Xin lỗi\07.MOV
+456,08.MOV,Xin lỗi,person_05,person_05\Xin lỗi\08.MOV
+457,09.MOV,Xin lỗi,person_05,person_05\Xin lỗi\09.MOV
+458,sorry_001.MOV,Xin lỗi,person_05,person_05\Xin lỗi\sorry_001.MOV
+459,sorry_002.MOV,Xin lỗi,person_05,person_05\Xin lỗi\sorry_002.MOV
+460,sorry_003.MOV,Xin lỗi,person_05,person_05\Xin lỗi\sorry_003.MOV
+461,eat_001.MOV,Ăn,person_05,person_05\Ăn\eat_001.MOV
+462,eat_002.MOV,Ăn,person_05,person_05\Ăn\eat_002.MOV
+463,eat_003.MOV,Ăn,person_05,person_05\Ăn\eat_003.MOV
+464,yes_001.MOV,Có,person_06,person_06\Có\yes_001.MOV
+465,thanks_001.MOV,Cảm ơn,person_06,person_06\Cảm ơn\thanks_001.MOV
+466,thanks_002.MOV,Cảm ơn,person_06,person_06\Cảm ơn\thanks_002.MOV
+467,thanks_003.MOV,Cảm ơn,person_06,person_06\Cảm ơn\thanks_003.MOV
+468,happy_001.mp4,Hạnh phúc,person_06,person_06\Hạnh phúc\happy_001.mp4
+469,happy_002.MOV,Hạnh phúc,person_06,person_06\Hạnh phúc\happy_002.MOV
+470,no_001.MOV,Không,person_06,person_06\Không\no_001.MOV
+471,goodbye_001.MOV,Tạm biệt,person_06,person_06\Tạm biệt\goodbye_001.MOV
+472,goodbye_002.MOV,Tạm biệt,person_06,person_06\Tạm biệt\goodbye_002.MOV
+473,hello_001.MOV,Xin chào,person_06,person_06\Xin chào\hello_001.MOV
+474,hello_002.MOV,Xin chào,person_06,person_06\Xin chào\hello_002.MOV
+475,hello_003.MOV,Xin chào,person_06,person_06\Xin chào\hello_003.MOV
+476,Kiều_100.MOV,Xin lỗi,person_06,person_06\Xin lỗi\Kiều_100.MOV
+477,Kiều_101.MOV,Xin lỗi,person_06,person_06\Xin lỗi\Kiều_101.MOV
+478,01.MOV,Có,person_07,person_07\Có\01.MOV
+479,02.MOV,Có,person_07,person_07\Có\02.MOV
+480,03.MOV,Có,person_07,person_07\Có\03.MOV
+481,04.MOV,Có,person_07,person_07\Có\04.MOV
+482,05.MOV,Có,person_07,person_07\Có\05.MOV
+483,06.MOV,Có,person_07,person_07\Có\06.MOV
+484,07.MOV,Có,person_07,person_07\Có\07.MOV
+485,08.MOV,Có,person_07,person_07\Có\08.MOV
+486,09.MOV,Có,person_07,person_07\Có\09.MOV
+487,10.mov,Có,person_07,person_07\Có\10.mov
+488,01.MOV,Cảm ơn,person_07,person_07\Cảm ơn\01.MOV
+489,02.MOV,Cảm ơn,person_07,person_07\Cảm ơn\02.MOV
+490,03.MOV,Cảm ơn,person_07,person_07\Cảm ơn\03.MOV
+491,04.MOV,Cảm ơn,person_07,person_07\Cảm ơn\04.MOV
+492,05.MOV,Cảm ơn,person_07,person_07\Cảm ơn\05.MOV
+493,06.MOV,Cảm ơn,person_07,person_07\Cảm ơn\06.MOV
+494,07.MOV,Cảm ơn,person_07,person_07\Cảm ơn\07.MOV
+495,08.MOV,Cảm ơn,person_07,person_07\Cảm ơn\08.MOV
+496,09.MOV,Cảm ơn,person_07,person_07\Cảm ơn\09.MOV
+497,10.MOV,Cảm ơn,person_07,person_07\Cảm ơn\10.MOV
+498,01.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\01.MOV
+499,02.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\02.MOV
+500,03.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\03.MOV
+501,04.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\04.MOV
+502,05.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\05.MOV
+503,06.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\06.MOV
+504,07.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\07.MOV
+505,08.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\08.MOV
+506,09.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\09.MOV
+507,10.MOV,Hạnh phúc,person_07,person_07\Hạnh phúc\10.MOV
+508,01.MOV,Không,person_07,person_07\Không\01.MOV
+509,02.MOV,Không,person_07,person_07\Không\02.MOV
+510,03.MOV,Không,person_07,person_07\Không\03.MOV
+511,04(1).MOV,Không,person_07,person_07\Không\04(1).MOV
+512,04.MOV,Không,person_07,person_07\Không\04.MOV
+513,05.MOV,Không,person_07,person_07\Không\05.MOV
+514,06.MOV,Không,person_07,person_07\Không\06.MOV
+515,07.MOV,Không,person_07,person_07\Không\07.MOV
+516,08.MOV,Không,person_07,person_07\Không\08.MOV
+517,09.MOV,Không,person_07,person_07\Không\09.MOV
+518,01.MOV,Tôi,person_07,person_07\Tôi\01.MOV
+519,02.MOV,Tôi,person_07,person_07\Tôi\02.MOV
+520,03.MOV,Tôi,person_07,person_07\Tôi\03.MOV
+521,04.MOV,Tôi,person_07,person_07\Tôi\04.MOV
+522,05.MOV,Tôi,person_07,person_07\Tôi\05.MOV
+523,06.MOV,Tôi,person_07,person_07\Tôi\06.MOV
+524,07.MOV,Tôi,person_07,person_07\Tôi\07.MOV
+525,08.MOV,Tôi,person_07,person_07\Tôi\08.MOV
+526,09.MOV,Tôi,person_07,person_07\Tôi\09.MOV
+527,10.MOV,Tôi,person_07,person_07\Tôi\10.MOV
+528,01.MOV,Tạm biệt,person_07,person_07\Tạm biệt\01.MOV
+529,02.MOV,Tạm biệt,person_07,person_07\Tạm biệt\02.MOV
+530,03.MOV,Tạm biệt,person_07,person_07\Tạm biệt\03.MOV
+531,04.MOV,Tạm biệt,person_07,person_07\Tạm biệt\04.MOV
+532,05.MOV,Tạm biệt,person_07,person_07\Tạm biệt\05.MOV
+533,06.MOV,Tạm biệt,person_07,person_07\Tạm biệt\06.MOV
+534,07.MOV,Tạm biệt,person_07,person_07\Tạm biệt\07.MOV
+535,08.MOV,Tạm biệt,person_07,person_07\Tạm biệt\08.MOV
+536,09.MOV,Tạm biệt,person_07,person_07\Tạm biệt\09.MOV
+537,10.MOV,Tạm biệt,person_07,person_07\Tạm biệt\10.MOV
+538,01.MOV,Uống,person_07,person_07\Uống\01.MOV
+539,02.MOV,Uống,person_07,person_07\Uống\02.MOV
+540,03.MOV,Uống,person_07,person_07\Uống\03.MOV
+541,04.MOV,Uống,person_07,person_07\Uống\04.MOV
+542,05.MOV,Uống,person_07,person_07\Uống\05.MOV
+543,06.MOV,Uống,person_07,person_07\Uống\06.MOV
+544,07.MOV,Uống,person_07,person_07\Uống\07.MOV
+545,08.MOV,Uống,person_07,person_07\Uống\08.MOV
+546,09.MOV,Uống,person_07,person_07\Uống\09.MOV
+547,10.MOV,Uống,person_07,person_07\Uống\10.MOV
+548,01.MOV,Xin chào,person_07,person_07\Xin chào\01.MOV
+549,02.MOV,Xin chào,person_07,person_07\Xin chào\02.MOV
+550,03.MOV,Xin chào,person_07,person_07\Xin chào\03.MOV
+551,04.MOV,Xin chào,person_07,person_07\Xin chào\04.MOV
+552,05.MOV,Xin chào,person_07,person_07\Xin chào\05.MOV
+553,06.MOV,Xin chào,person_07,person_07\Xin chào\06.MOV
+554,07.MOV,Xin chào,person_07,person_07\Xin chào\07.MOV
+555,08(1).MOV,Xin chào,person_07,person_07\Xin chào\08(1).MOV
+556,08.MOV,Xin chào,person_07,person_07\Xin chào\08.MOV
+557,09.MOV,Xin chào,person_07,person_07\Xin chào\09.MOV
+558,10.MOV,Xin chào,person_07,person_07\Xin chào\10.MOV
+559,01.MOV,Xin lỗi,person_07,person_07\Xin lỗi\01.MOV
+560,02.MOV,Xin lỗi,person_07,person_07\Xin lỗi\02.MOV
+561,03.MOV,Xin lỗi,person_07,person_07\Xin lỗi\03.MOV
+562,04.MOV,Xin lỗi,person_07,person_07\Xin lỗi\04.MOV
+563,05.MOV,Xin lỗi,person_07,person_07\Xin lỗi\05.MOV
+564,06.MOV,Xin lỗi,person_07,person_07\Xin lỗi\06.MOV
+565,07.MOV,Xin lỗi,person_07,person_07\Xin lỗi\07.MOV
+566,08.MOV,Xin lỗi,person_07,person_07\Xin lỗi\08.MOV
+567,09.MOV,Xin lỗi,person_07,person_07\Xin lỗi\09.MOV
+568,01.MOV,Ăn,person_07,person_07\Ăn\01.MOV
+569,02.MOV,Ăn,person_07,person_07\Ăn\02.MOV
+570,03.MOV,Ăn,person_07,person_07\Ăn\03.MOV
+571,04.MOV,Ăn,person_07,person_07\Ăn\04.MOV
+572,05.MOV,Ăn,person_07,person_07\Ăn\05.MOV
+573,06.MOV,Ăn,person_07,person_07\Ăn\06.MOV
+574,07.MOV,Ăn,person_07,person_07\Ăn\07.MOV
+575,08.MOV,Ăn,person_07,person_07\Ăn\08.MOV
+576,09.MOV,Ăn,person_07,person_07\Ăn\09.MOV
+577,10.MOV,Ăn,person_07,person_07\Ăn\10.MOV
+604,IMG_0642.MOV,Có,person_08,person_08\Có\IMG_0642.MOV
+605,IMG_0643.MOV,Có,person_08,person_08\Có\IMG_0643.MOV
+606,IMG_0645.MOV,Có,person_08,person_08\Có\IMG_0645.MOV
+607,IMG_0646.MOV,Có,person_08,person_08\Có\IMG_0646.MOV
+608,IMG_0647.MOV,Có,person_08,person_08\Có\IMG_0647.MOV
+609,IMG_0648.MOV,Có,person_08,person_08\Có\IMG_0648.MOV
+610,IMG_0649.MOV,Có,person_08,person_08\Có\IMG_0649.MOV
+611,IMG_0650.MOV,Có,person_08,person_08\Có\IMG_0650.MOV
+612,IMG_0651.MOV,Có,person_08,person_08\Có\IMG_0651.MOV
+613,IMG_0652.MOV,Có,person_08,person_08\Có\IMG_0652.MOV
+614,IMG_0653.MOV,Có,person_08,person_08\Có\IMG_0653.MOV
+615,IMG_0631.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0631.MOV
+616,IMG_0632.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0632.MOV
+617,IMG_0633.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0633.MOV
+618,IMG_0634.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0634.MOV
+619,IMG_0635.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0635.MOV
+620,IMG_0636.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0636.MOV
+621,IMG_0637.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0637.MOV
+622,IMG_0638.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0638.MOV
+623,IMG_0639.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0639.MOV
+624,IMG_0641.MOV,Cảm ơn,person_08,person_08\Cảm ơn\IMG_0641.MOV
+625,IMG_0654.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0654.MOV
+626,IMG_0655.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0655.MOV
+627,IMG_0656.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0656.MOV
+628,IMG_0657.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0657.MOV
+629,IMG_0658.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0658.MOV
+630,IMG_0659.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0659.MOV
+631,IMG_0660.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0660.MOV
+632,IMG_0661.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0661.MOV
+633,IMG_0662.MOV,Hạnh phúc,person_08,person_08\Hạnh phúc\IMG_0662.MOV
+634,IMG_0664.MOV,Không,person_08,person_08\Không\IMG_0664.MOV
+635,IMG_0665.MOV,Không,person_08,person_08\Không\IMG_0665.MOV
+636,IMG_0666.MOV,Không,person_08,person_08\Không\IMG_0666.MOV
+637,IMG_0667.MOV,Không,person_08,person_08\Không\IMG_0667.MOV
+638,IMG_0668.MOV,Không,person_08,person_08\Không\IMG_0668.MOV
+639,IMG_0669.MOV,Không,person_08,person_08\Không\IMG_0669.MOV
+640,IMG_0670.MOV,Không,person_08,person_08\Không\IMG_0670.MOV
+641,IMG_0671.MOV,Không,person_08,person_08\Không\IMG_0671.MOV
+642,IMG_0672.MOV,Không,person_08,person_08\Không\IMG_0672.MOV
+643,IMG_0685.MOV,Tôi,person_08,person_08\Tôi\IMG_0685.MOV
+644,IMG_0686.MOV,Tôi,person_08,person_08\Tôi\IMG_0686.MOV
+645,IMG_0688.MOV,Tôi,person_08,person_08\Tôi\IMG_0688.MOV
+646,IMG_0689.MOV,Tôi,person_08,person_08\Tôi\IMG_0689.MOV
+647,IMG_0690.MOV,Tôi,person_08,person_08\Tôi\IMG_0690.MOV
+648,IMG_0691.MOV,Tôi,person_08,person_08\Tôi\IMG_0691.MOV
+649,IMG_0692.MOV,Tôi,person_08,person_08\Tôi\IMG_0692.MOV
+650,IMG_0693.MOV,Tôi,person_08,person_08\Tôi\IMG_0693.MOV
+651,IMG_0694.MOV,Tôi,person_08,person_08\Tôi\IMG_0694.MOV
+652,IMG_0673.MOV,Tạm biệt,person_08,person_08\Tạm biệt\IMG_0673.MOV
+653,IMG_0676.MOV,Tạm biệt,person_08,person_08\Tạm biệt\IMG_0676.MOV
+654,IMG_0677.MOV,Tạm biệt,person_08,person_08\Tạm biệt\IMG_0677.MOV
+655,IMG_0678.MOV,Tạm biệt,person_08,person_08\Tạm biệt\IMG_0678.MOV
+656,IMG_0680.MOV,Tạm biệt,person_08,person_08\Tạm biệt\IMG_0680.MOV
+657,IMG_0681.MOV,Tạm biệt,person_08,person_08\Tạm biệt\IMG_0681.MOV
+658,IMG_0682.MOV,Tạm biệt,person_08,person_08\Tạm biệt\IMG_0682.MOV
+659,IMG_0683.MOV,Tạm biệt,person_08,person_08\Tạm biệt\IMG_0683.MOV
+660,IMG_0695.MOV,Uống,person_08,person_08\Uống\IMG_0695.MOV
+661,IMG_0696.MOV,Uống,person_08,person_08\Uống\IMG_0696.MOV
+662,IMG_0697.MOV,Uống,person_08,person_08\Uống\IMG_0697.MOV
+663,IMG_0698.MOV,Uống,person_08,person_08\Uống\IMG_0698.MOV
+664,IMG_0699.MOV,Uống,person_08,person_08\Uống\IMG_0699.MOV
+665,IMG_0701.MOV,Uống,person_08,person_08\Uống\IMG_0701.MOV
+666,IMG_0702.MOV,Uống,person_08,person_08\Uống\IMG_0702.MOV
+667,IMG_0703.MOV,Xin chào,person_08,person_08\Xin chào\IMG_0703.MOV
+668,IMG_0704.MOV,Xin chào,person_08,person_08\Xin chào\IMG_0704.MOV
+669,IMG_0705.MOV,Xin chào,person_08,person_08\Xin chào\IMG_0705.MOV
+670,IMG_0706.MOV,Xin chào,person_08,person_08\Xin chào\IMG_0706.MOV
+671,IMG_0707.MOV,Xin chào,person_08,person_08\Xin chào\IMG_0707.MOV
+672,IMG_0708.MOV,Xin chào,person_08,person_08\Xin chào\IMG_0708.MOV
+673,IMG_0709.MOV,Xin chào,person_08,person_08\Xin chào\IMG_0709.MOV
+674,IMG_0710.MOV,Xin chào,person_08,person_08\Xin chào\IMG_0710.MOV
+675,IMG_0711.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0711.MOV
+676,IMG_0712.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0712.MOV
+677,IMG_0713.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0713.MOV
+678,IMG_0714.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0714.MOV
+679,IMG_0715.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0715.MOV
+680,IMG_0716.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0716.MOV
+681,IMG_0718.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0718.MOV
+682,IMG_0719.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0719.MOV
+683,IMG_0720.MOV,Xin lỗi,person_08,person_08\Xin lỗi\IMG_0720.MOV
+684,IMG_0621.MOV,Ăn,person_08,person_08\Ăn\IMG_0621.MOV
+685,IMG_0622.MOV,Ăn,person_08,person_08\Ăn\IMG_0622.MOV
+686,IMG_0623.MOV,Ăn,person_08,person_08\Ăn\IMG_0623.MOV
+687,IMG_0625.MOV,Ăn,person_08,person_08\Ăn\IMG_0625.MOV
+688,IMG_0626.MOV,Ăn,person_08,person_08\Ăn\IMG_0626.MOV
+689,IMG_0627.MOV,Ăn,person_08,person_08\Ăn\IMG_0627.MOV
+690,IMG_0628.MOV,Ăn,person_08,person_08\Ăn\IMG_0628.MOV
+691,IMG_0629.MOV,Ăn,person_08,person_08\Ăn\IMG_0629.MOV
+692,IMG_0630.MOV,Ăn,person_08,person_08\Ăn\IMG_0630.MOV
