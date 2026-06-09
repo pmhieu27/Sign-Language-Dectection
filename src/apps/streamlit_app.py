@@ -14,14 +14,14 @@ import streamlit as st
 from streamlit_webrtc import VideoProcessorBase, webrtc_streamer
 from tensorflow import keras
 
-from setting.config import (
+from src.config import (
     MODEL_FACE_LANDMARK_PATH,
     MODEL_LANDMARK_PATH,
     SEQ_LEN,
     FACE_ANCHOR_INDICES,
     NUM_HAND_LANDMARKS,
 )
-from src.preprocess import normalize_sequence, pad_or_sample
+from src.data.preprocess import normalize_sequence, pad_or_sample
 
 
 HAND_CONNECTIONS = [
@@ -540,7 +540,7 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
-    default_model = os.path.join("models", "cnn_lstm_best.keras")
+    default_model = os.path.join("models", "cnn_lstm_final_best.keras")
     default_encoder = os.path.join("datasets", "processed", "label_encoder.pkl")
 
     missing_files = ensure_required_files()
