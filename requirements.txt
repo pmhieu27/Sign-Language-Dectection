@@ -1,4 +1,4 @@
-av==14.4.0
+av==12.3.0
 numpy==1.26.4
 python-dotenv>=0.9.9
 matplotlib>=3.9.0
