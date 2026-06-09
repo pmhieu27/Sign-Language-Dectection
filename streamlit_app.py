@@ -297,7 +297,7 @@ class SignVideoProcessor(VideoProcessorBase):
             elif len(self.sequence_buffer) > 0:
                 self.sequence_buffer.popleft()
 
-            if len(self.sequence_buffer) >= 15:
+            if len(self.sequence_buffer) == SEQ_LEN:
                 t_pred_start = time.time()
                 result = predict_from_sequence(np.array(self.sequence_buffer, dtype=np.float32), self.assets)
                 self.latency = (time.time() - t_pred_start) * 1000
@@ -593,14 +593,7 @@ def main():
                 ctx = webrtc_streamer(
                     key="sign-language-stream",
                     video_processor_factory=lambda: SignVideoProcessor(assets),
-                    media_stream_constraints={
-                        "video": {
-                            "width": {"ideal": 960},
-                            "height": {"ideal": 540},
-                            "frameRate": {"ideal": 30}
-                        },
-                        "audio": False
-                    },
+                    media_stream_constraints={"video": True, "audio": False},
                     async_processing=True,
                 )
             else:
@@ -743,7 +736,7 @@ def main():
 </div>
 """, unsafe_allow_html=True)
                 
-                buf_color = "#10B981" if buffer_len >= 15 else "#F59E0B"
+                buf_color = "#10B981" if buffer_len >= SEQ_LEN else "#F59E0B"
                 status_text = "ĐANG CHẠY" if ctx.state.playing else "DỪNG"
                 status_color = "#10B981" if ctx.state.playing else "#EF4444"
                 
