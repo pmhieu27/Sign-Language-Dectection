@@ -781,18 +781,13 @@ def main():
     {history_html}
 </div>
 """, unsafe_allow_html=True)
-                
-                current_time = time.time()
-                last_rerun_time = st.session_state.get("last_rerun_time", 0.0)
                 pred_changed = (predicted_label != st.session_state.get("last_ui_label", ""))
                 
-                if current_time - last_rerun_time > 0.3 or pred_changed:
-                    st.session_state.last_rerun_time = current_time
+                if pred_changed:
                     st.session_state.last_ui_label = predicted_label
-                    time.sleep(0.05)
                     st.rerun()
                 else:
-                    time.sleep(0.05)
+                    time.sleep(0.1)
     else:
         # Upload Video Mode predictions
         if st.session_state.upload_result is not None:
