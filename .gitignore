@@ -22,7 +22,6 @@ venv/
 # Dataset — quá nặng, không push
 datasets/dataset/
 datasets/landmarks/
-datasets/processed/
 
 # Model weights — chỉ push mediapipe tasks
 models/*.keras
