@@ -6,12 +6,9 @@ Usage: python src/scan_dataset.py
 
 import csv
 import os
-import sys
 from collections import Counter
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-# pyrefly: ignore [missing-import]
-from setting import config
+from src import config
 
 
 VIDEO_EXTENSIONS = {'.mov', '.mp4', '.avi'}

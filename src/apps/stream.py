@@ -20,123 +20,15 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 from tensorflow import keras
 
-# pyrefly: ignore [missing-import]
-from setting.config import (
-    MODEL_LANDMARK_PATH, MODEL_FACE_LANDMARK_PATH, SEQ_LEN,
-    FACE_ANCHOR_INDICES, NUM_HAND_LANDMARKS
+from src.config import MODEL_FACE_LANDMARK_PATH, MODEL_LANDMARK_PATH, SEQ_LEN
+from src.data.preprocess import normalize_sequence
+from src.inference.pipeline import (
+    build_hand_blocks,
+    create_face_landmarker,
+    create_hand_landmarker,
+    draw_hands,
+    extract_face_anchors,
 )
-# pyrefly: ignore [missing-import]
-from src.preprocess import normalize_sequence
-
-
-HAND_CONNECTIONS = [
-    (0, 1), (1, 2), (2, 3), (3, 4),
-    (0, 5), (5, 6), (6, 7), (7, 8),
-    (5, 9), (9, 10), (10, 11), (11, 12),
-    (9, 13), (13, 14), (14, 15), (15, 16),
-    (0, 17), (17, 18), (18, 19), (19, 20),
-    (13, 17)
-]
-
-
-def extract_face_anchors(face_landmarks):
-    return np.array(
-        [[face_landmarks[idx].x, face_landmarks[idx].y, face_landmarks[idx].z]
-         for idx in FACE_ANCHOR_INDICES],
-        dtype=np.float32
-    ).flatten()
-
-
-def create_face_landmarker():
-    BaseOptions = mp.tasks.BaseOptions
-    FaceLandmarker = mp.tasks.vision.FaceLandmarker
-    FaceLandmarkerOptions = mp.tasks.vision.FaceLandmarkerOptions
-    VisionRunningMode = mp.tasks.vision.RunningMode
-
-    options = FaceLandmarkerOptions(
-        base_options=BaseOptions(model_asset_path=MODEL_FACE_LANDMARK_PATH),
-        running_mode=VisionRunningMode.VIDEO,
-        num_faces=1,
-        min_face_detection_confidence=0.5,
-        min_face_presence_confidence=0.5,
-        min_tracking_confidence=0.5,
-        output_face_blendshapes=False,
-        output_facial_transformation_matrixes=False,
-    )
-    return FaceLandmarker.create_from_options(options)
-
-
-def build_hand_blocks(result):
-    left_block = np.zeros(NUM_HAND_LANDMARKS * 3, dtype=np.float32)
-    right_block = np.zeros(NUM_HAND_LANDMARKS * 3, dtype=np.float32)
-    presence = np.zeros(2, dtype=np.float32)
-    left_landmarks = None
-    right_landmarks = None
-
-    if not result or not result.hand_landmarks:
-        return left_block, right_block, presence, left_landmarks, right_landmarks
-
-    for idx, hand_landmarks in enumerate(result.hand_landmarks):
-        hand_vector = np.array(
-            [[lm.x, lm.y, lm.z] for lm in hand_landmarks],
-            dtype=np.float32
-        ).flatten()
-
-        handedness_list = result.handedness[idx] if idx < len(result.handedness) else []
-        handedness = handedness_list[0].category_name if handedness_list else None
-        handedness = (handedness or '').lower()
-
-        if handedness == 'left':
-            left_block = hand_vector
-            presence[0] = 1.0
-            left_landmarks = hand_landmarks
-        elif handedness == 'right':
-            right_block = hand_vector
-            presence[1] = 1.0
-            right_landmarks = hand_landmarks
-        elif presence[0] == 0.0:
-            left_block = hand_vector
-            presence[0] = 1.0
-            left_landmarks = hand_landmarks
-        else:
-            right_block = hand_vector
-            presence[1] = 1.0
-            right_landmarks = hand_landmarks
-
-    return left_block, right_block, presence, left_landmarks, right_landmarks
-
-
-def draw_hands(frame, hands_to_draw, width, height):
-    hand_colors = {
-        'LEFT': (0, 255, 0),
-        'RIGHT': (255, 0, 0),
-    }
-
-    for hand_name, one_hand in hands_to_draw:
-        color = hand_colors.get(hand_name, (0, 255, 255))
-        for start_idx, end_idx in HAND_CONNECTIONS:
-            start_lm = one_hand[start_idx]
-            end_lm = one_hand[end_idx]
-            start_pt = (int(start_lm.x * width), int(start_lm.y * height))
-            end_pt = (int(end_lm.x * width), int(end_lm.y * height))
-            cv2.line(frame, start_pt, end_pt, color, 2)
-
-        for lm in one_hand:
-            pt = (int(lm.x * width), int(lm.y * height))
-            cv2.circle(frame, pt, 5, (0, 0, 255), -1)
-
-        wrist = one_hand[0]
-        wrist_pt = (int(wrist.x * width), int(wrist.y * height))
-        cv2.putText(
-            frame,
-            hand_name,
-            (wrist_pt[0] + 8, wrist_pt[1] - 8),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.55,
-            color,
-            2,
-            cv2.LINE_AA
-        )
 
 
 def parse_args():
@@ -147,7 +39,7 @@ def parse_args():
     args = parser.parse_args()
 
     if args.label_encoder is None:
-        base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         args.label_encoder = os.path.join(base, 'datasets', 'processed', 'label_encoder.pkl')
 
     return args
@@ -174,9 +66,6 @@ def main():
 
     model = keras.models.load_model(args.model_path)
 
-    BaseOptions = mp.tasks.BaseOptions
-    HandLandmarker = mp.tasks.vision.HandLandmarker
-    HandLandmarkerOptions = mp.tasks.vision.HandLandmarkerOptions
     VisionRunningMode = mp.tasks.vision.RunningMode
 
     latest_result = None
@@ -185,18 +74,11 @@ def main():
         nonlocal latest_result
         latest_result = result
 
-    hand_options = HandLandmarkerOptions(
-        base_options=BaseOptions(model_asset_path=MODEL_LANDMARK_PATH),
-        running_mode=VisionRunningMode.LIVE_STREAM,
-        num_hands=2,
-        min_hand_detection_confidence=0.5,
-        min_hand_presence_confidence=0.5,
-        min_tracking_confidence=0.5,
+    hand_landmarker = create_hand_landmarker(
+        VisionRunningMode.LIVE_STREAM,
         result_callback=landmarker_callback,
     )
-
-    hand_landmarker = HandLandmarker.create_from_options(hand_options)
-    face_landmarker = create_face_landmarker()
+    face_landmarker = create_face_landmarker(VisionRunningMode.VIDEO)
 
     sequence_buffer = deque(maxlen=SEQ_LEN)
     latest_face_vector = None

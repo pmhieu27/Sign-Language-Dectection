@@ -1,12 +1,13 @@
 import os
 
-root = 'e:/h1eesu/AI/sign_language/datasets/dataset/raw_videos'
+# pyrefly: ignore [missing-import]
+from src.config import DATASET_ROOT
 
 label_counts = {}
 person_label = {}
 
-for person in sorted(os.listdir(root)):
-    ppath = os.path.join(root, person)
+for person in sorted(os.listdir(DATASET_ROOT)):
+    ppath = os.path.join(DATASET_ROOT, person)
     if not os.path.isdir(ppath):
         continue
     for label in sorted(os.listdir(ppath)):

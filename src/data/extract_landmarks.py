@@ -5,7 +5,6 @@ Usage: python src/extract_landmarks.py
 """
 
 import os
-import sys
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 os.environ['GLOG_minloglevel'] = '2'
@@ -17,8 +16,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-# pyrefly: ignore [missing-import]
-from setting.config import (
+from src.config import (
     DATASET_ROOT, METADATA_PATH, LANDMARK_PATH, MODEL_LANDMARK_PATH, MODEL_FACE_LANDMARK_PATH,
     FACE_ANCHOR_INDICES, NUM_HAND_LANDMARKS
 )
@@ -164,11 +162,11 @@ def process_video(row):
         return 'FAIL', row.get('video_name', 'Unknown'), f"Loi: {str(exc)}"
 
 
-if __name__ == '__main__':
+def main():
     if not os.path.exists(MODEL_FACE_LANDMARK_PATH):
         print(f"Loi: Khong tim thay file face landmarker tai: {MODEL_FACE_LANDMARK_PATH}")
         print("Can them model mat (.task) de trich xuat feature mat.")
-        sys.exit(1)
+        return
 
     os.makedirs(LANDMARK_PATH, exist_ok=True)
 
@@ -218,3 +216,7 @@ if __name__ == '__main__':
             print(f"  - {item}")
 
     print(f"\nLandmark luu tai: {LANDMARK_PATH}")
+
+
+if __name__ == '__main__':
+    main()

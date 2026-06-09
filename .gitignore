@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.pyc
+*.egg-info
 
 # Virtual env
 .venv/
@@ -12,27 +13,26 @@ venv/
 # VSCode
 .vscode/
 
-# Dataset
-datasets/raw/
-
-# Models
-models/*.pt
-models/*.pth
-
 # OS
 .DS_Store
-# Video và landmark — quá nặng
-datasets/Videos/
-datasets/landmarks/
-
-# Model weights khác
-models/*.h5
-models/*.keras
-models/*.pkl
-datasets/processed/
-
 *.log
 
-*.egg-info
+# ===== Project-specific =====
 
+# Dataset — quá nặng, không push
 datasets/dataset/
+datasets/landmarks/
+datasets/processed/
+
+# Model weights — chỉ push mediapipe tasks
+models/*.keras
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.pkl
+models/*.json
+
+# Giữ mediapipe tasks
+!models/mediapipe/
+cnn_lstm_history.json
+loc.txt

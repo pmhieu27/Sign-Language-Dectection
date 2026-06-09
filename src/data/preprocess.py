@@ -11,8 +11,7 @@ import sys
 import pickle
 from sklearn.preprocessing import LabelEncoder
 
-# pyrefly: ignore [missing-import]
-from setting.config import (
+from src.config import (
     LANDMARK_PATH, METADATA_PATH, PROCESSED_PATH,
     SEQ_LEN, NUM_FEATURES, NUM_HANDS, NUM_HAND_LANDMARKS, NUM_FACE_LANDMARKS,
     HAND_COORD_FEATURES, FACE_COORD_FEATURES, COORD_FEATURES,

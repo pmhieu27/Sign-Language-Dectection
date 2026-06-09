@@ -1,6 +1,6 @@
 """
-Step 4: Data Augmentation — CHI ap dung tren Train set
-Luu ra file RIENG (X_train_aug.npy), KHONG ghi de file goc.
+Step 4: Data Augmentation — Chỉ áp dụng trên Train set
+Lưu ra file RIÊNG (X_train_aug.npy), KHÔNG ghi đè file gốc.
 
 Usage: python src/augmentation.py
 """
@@ -9,10 +9,8 @@ import numpy as np
 import os
 from scipy.interpolate import interp1d
 
-# pyrefly: ignore [missing-import]
-from setting.config import PROCESSED_PATH, COORD_FEATURES, RAW_FEATURES, NUM_FEATURES
-# pyrefly: ignore [missing-import]
-from src.preprocess import compute_inter_hand_features
+from src.config import PROCESSED_PATH, COORD_FEATURES, RAW_FEATURES, NUM_FEATURES
+from src.data.preprocess import compute_inter_hand_features
 
 
 def _split_processed_sequence(seq):
@@ -32,7 +30,7 @@ def _rebuild_processed_sequence(coords, presence):
 
 
 def speed_variation(seq, factor):
-    """Thay doi toc do — resample sequence voi he so factor."""
+    """Thay đổi tốc độ — resample sequence với hệ số factor."""
     old_len = len(seq)
     new_len = max(2, int(old_len * factor))
     f = interp1d(np.arange(old_len), seq, axis=0)
@@ -42,14 +40,14 @@ def speed_variation(seq, factor):
 
 
 def gaussian_jitter(seq, sigma=0.01):
-    """Them nhieu Gaussian nho vao toa do."""
+    """Thêm nhiễu Gaussian nhỏ vào tọa độ."""
     coords, presence = _split_processed_sequence(seq)
     coords = coords + np.random.normal(0, sigma, coords.shape)
     return _rebuild_processed_sequence(coords, presence)
 
 
 def temporal_crop(seq, crop_ratio=0.8):
-    """Cat ngau nhien sequence, pad bang frame cuoi."""
+    """Cắt ngẫu nhiên sequence, pad bằng frame cuối."""
     total = len(seq)
     keep = int(total * crop_ratio)
     start = np.random.randint(0, total - keep + 1)
@@ -59,7 +57,7 @@ def temporal_crop(seq, crop_ratio=0.8):
 
 
 def scale_variation(seq, scale_range=(0.9, 1.1)):
-    """Nhan toan bo toa do voi he so scale ngau nhien."""
+    """Nhân toàn bộ tọa độ với hệ số scale ngẫu nhiên."""
     scale = np.random.uniform(*scale_range)
     coords, presence = _split_processed_sequence(seq)
     coords = coords * scale
@@ -67,7 +65,7 @@ def scale_variation(seq, scale_range=(0.9, 1.1)):
 
 
 def time_warp(seq, sigma=0.2):
-    """Bien dang thoi gian ngau nhien — co gian khong deu."""
+    """Biến dạng thời gian ngẫu nhiên — co giãn không đều."""
     n = len(seq)
     warp = np.cumsum(np.abs(np.random.normal(1, sigma, n)))
     warp = warp / warp[-1] * (n - 1)
@@ -77,7 +75,7 @@ def time_warp(seq, sigma=0.2):
 
 
 def rotation_2d(seq, max_angle=15):
-    """Xoay nhe toa do x,y — mo phong nghieng tay."""
+    """Xoay nhe tọa độ x,y — mô phỏng nghiêng tay."""
     angle = np.radians(np.random.uniform(-max_angle, max_angle))
     cos_a, sin_a = np.cos(angle), np.sin(angle)
     coords, presence = _split_processed_sequence(seq)
@@ -91,16 +89,16 @@ def rotation_2d(seq, max_angle=15):
 
 
 def augment_train():
-    """Augment train set: moi sample sinh them 10 ban -> tong x11."""
+    """Augment train set: mỗi sample sinh thêm 10 bản -> tổng x11."""
     X_train = np.load(os.path.join(PROCESSED_PATH, 'X_train.npy'))
     y_train = np.load(os.path.join(PROCESSED_PATH, 'y_train.npy'))
 
-    print(f"Truoc augmentation: {X_train.shape}")
+    print(f"Trước augmentation: {X_train.shape}")
 
     aug_path = os.path.join(PROCESSED_PATH, 'X_train_aug.npy')
     if os.path.exists(aug_path):
-        print(f"\n[WARNING] File {aug_path} da ton tai!")
-        resp = input("Ghi de? (y/n): ").strip().lower()
+        print(f"\n[WARNING] File {aug_path} đã tồn tại!")
+        resp = input("Ghi đè? (y/n): ").strip().lower()
         if resp != 'y':
             print("Huy bo.")
             return
@@ -112,17 +110,23 @@ def augment_train():
         seq = X_train[i]
         lbl = y_train[i]
 
-        X_aug.append(seq);                                       y_aug.append(lbl)
-        X_aug.append(speed_variation(seq, 0.9));                 y_aug.append(lbl)
-        X_aug.append(speed_variation(seq, 1.1));                 y_aug.append(lbl)
-        X_aug.append(gaussian_jitter(seq, sigma=0.01));          y_aug.append(lbl)
-        # X_aug.append(temporal_crop(seq, crop_ratio=0.8));        y_aug.append(lbl)
+        X_aug.append(seq)                                       
+        y_aug.append(lbl)
+
+        X_aug.append(speed_variation(seq, 0.9))               
+        y_aug.append(lbl)
+
+        X_aug.append(speed_variation(seq, 1.1))                 
+        y_aug.append(lbl)
+
+        X_aug.append(gaussian_jitter(seq, sigma=0.01))          
+        y_aug.append(lbl)
+        
         # X_aug.append(scale_variation(seq));                      y_aug.append(lbl)
-        X_aug.append(time_warp(seq, sigma=0.2));                 y_aug.append(lbl)
-        X_aug.append(rotation_2d(seq, max_angle=8));            y_aug.append(lbl)
-        # X_aug.append(gaussian_jitter(seq, sigma=0.02));          y_aug.append(lbl)
-        # X_aug.append(speed_variation(seq, 0.7));                 y_aug.append(lbl)
-        # X_aug.append(scale_variation(gaussian_jitter(seq, 0.01))); y_aug.append(lbl)
+
+        X_aug.append(rotation_2d(seq, max_angle=3))           
+        y_aug.append(lbl)
+
 
     X_aug = np.array(X_aug, dtype=np.float32)
     y_aug = np.array(y_aug)
@@ -135,11 +139,11 @@ def augment_train():
     np.save(os.path.join(PROCESSED_PATH, 'y_train_aug.npy'), y_aug)
 
     print(f"Sau augmentation: {X_aug.shape}")
-    print(f"Tang tu {len(X_train)} -> {len(X_aug)} samples (x{len(X_aug)//len(X_train)})")
-    print("\nDa luu:")
+    print(f"Tăng từ {len(X_train)} -> {len(X_aug)} samples (x{len(X_aug)//len(X_train)})")
+    print("\nĐã lưu:")
     print(f"  X_train_aug.npy : {X_aug.shape}")
     print(f"  y_train_aug.npy : {y_aug.shape}")
-    print("  (Val va Test giu nguyen — khong augment)")
+    print("  (Val và Test giữ nguyên — không augment)")
 
 
 if __name__ == '__main__':
