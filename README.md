@@ -117,14 +117,14 @@ Model cuối hiện dùng cấu hình đã tune:
 Chạy model cuối:
 
 ```bash
-python scripts/train.py final_best
+python scripts/train.py final
 ```
 
 Ví dụ:
 
 ```bash
-python scripts/train.py final_best --epochs 150 --seed 42
-python scripts/train.py final_best --epochs 150 --seed 123
+python scripts/train.py final --epochs 150 --seed 42
+python scripts/train.py final --epochs 150 --seed 123
 ```
 
 Mặc định script sẽ:
@@ -148,7 +148,7 @@ python scripts/evaluate.py
 Hoặc chỉ định đường dẫn model:
 
 ```bash
-python scripts/evaluate.py --model_path models/cnn_lstm_final_best.keras
+python scripts/evaluate.py --model_path models/cnn_lstm_final.keras
 ```
 
 Evaluator sẽ:
@@ -162,10 +162,10 @@ Evaluator sẽ:
 
 Đồng thời lưu:
 
-- `models/evaluation_final_best_report.json`
-- `models/evaluation_final_best_summary.json`
-- `models/confusion_matrix_final_best.png`
-- `models/confusion_matrix_final_best_normalized.png`
+- `models/evaluation_final_report.json`
+- `models/evaluation_final_summary.json`
+- `models/confusion_matrix_final.png`
+- `models/confusion_matrix_final_normalized.png`
 
 ## 7. Chạy Streamlit
 
@@ -173,7 +173,7 @@ Evaluator sẽ:
 
 Sau khi đã có:
 
-- `models/cnn_lstm_final_best.keras`
+- `models/cnn_lstm_final.keras`
 - `datasets/processed/label_encoder.pkl`
 - `models/mediapipe/hand_landmarker.task`
 - `models/mediapipe/face_landmarker.task`
@@ -186,7 +186,7 @@ streamlit run app.py
 
 App mặc định sẽ dùng:
 
-- model: `models/cnn_lstm_final_best.keras`
+- model: `models/cnn_lstm_final.keras`
 - label encoder: `datasets/processed/label_encoder.pkl`
 
 ### 7.2. Deploy lên Streamlit Community Cloud
@@ -205,7 +205,7 @@ Lưu ý:
 
 - bạn vẫn cần đưa các file model và MediaPipe task cần thiết lên nơi deploy
 - app cần ít nhất các file:
-  - `models/cnn_lstm_final_best.keras`
+  - `models/cnn_lstm_final.keras`
   - `datasets/processed/label_encoder.pkl`
   - `models/mediapipe/hand_landmarker.task`
   - `models/mediapipe/face_landmarker.task`
@@ -219,10 +219,10 @@ Nếu không muốn public model/dataset lớn, bạn có thể:
 
 Sau khi train model cuối, các file chính sẽ nằm trong `models/`:
 
-- `cnn_lstm_final_best.keras`: model tốt nhất
-- `cnn_lstm_final_best_history.json`: history huấn luyện
-- `cnn_lstm_final_best_metadata.json`: metadata cấu hình train
-- `cnn_lstm_final_best_test_report.json`: classification report trên test set
+- `cnn_lstm_final.keras`: model tốt nhất
+- `cnn_lstm_final_history.json`: history huấn luyện
+- `cnn_lstm_final_metadata.json`: metadata cấu hình train
+- `cnn_lstm_final_test_report.json`: classification report trên test set
 
 ## 9. Luồng làm việc khuyến nghị
 
@@ -231,7 +231,7 @@ Thứ tự chạy khuyến nghị:
 1. Chuẩn bị dữ liệu bằng `scripts/prepare_data.py`
 2. Dùng `python scripts/train.py loso` để tuning
 3. Chốt config tốt nhất
-4. Chạy `python scripts/train.py final_best`
+4. Chạy `python scripts/train.py final`
 5. Chạy `python scripts/evaluate.py`
 6. Chạy `streamlit run app.py`
 

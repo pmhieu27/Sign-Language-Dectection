@@ -13,10 +13,17 @@ Usage:
 
 import sys
 
+# Thiết lập encoding UTF-8 cho stdout/stderr để tránh lỗi hiển thị ký tự Unicode trên Windows
+if sys.platform.startswith('win'):
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+
 
 MODELS = {
+    'lstm': 'src.training.train_lstm',
+    'cnn_lstm': 'src.training.train_cnn_lstm',
     'loso': 'src.training.train_loso',
-    'final_best': 'src.training.train_best_final',
+    'final': 'src.training.train_final',
 }
 
 

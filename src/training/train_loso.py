@@ -56,7 +56,7 @@ def set_seed(seed):
         pass
 
 
-def augment_data(X, y, seed=42):
+def augment_data(X, y, seed=123):
     """Augment trực tiếp trong memory — không lưu file.
     Comment/uncomment từng dòng augmentation bên dưới để tuỳ chỉnh.
     

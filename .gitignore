@@ -35,3 +35,4 @@ models/*.json
 !models/mediapipe/
 cnn_lstm_history.json
 loc.txt
+uv.lock

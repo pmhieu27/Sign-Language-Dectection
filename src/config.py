@@ -6,12 +6,12 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ===== Paths =====
-DATASET_ROOT = os.path.join(BASE_DIR, os.getenv('DATASET_ROOT', 'datasets/dataset'))
-METADATA_PATH = os.path.join(BASE_DIR, os.getenv('METADATA_PATH', 'datasets/metadata/metadata.csv'))
-LANDMARK_PATH = os.path.join(BASE_DIR, os.getenv('LANDMARK_PATH', 'datasets/landmarks'))
-PROCESSED_PATH = os.path.join(BASE_DIR, os.getenv('PROCESSED_PATH', 'datasets/processed'))
-MODEL_LANDMARK_PATH = os.path.join(BASE_DIR, os.getenv('MODEL_LANDMARK_PATH', 'models/mediapipe/hand_landmarker.task'))
-MODEL_FACE_LANDMARK_PATH = os.path.join(BASE_DIR, os.getenv('MODEL_FACE_LANDMARK_PATH', 'models/mediapipe/face_landmarker.task'))
+DATASET_ROOT = os.path.join(BASE_DIR, os.getenv('DATASET_ROOT', 'datasets\  dataset'))
+METADATA_PATH = os.path.join(BASE_DIR, os.getenv('METADATA_PATH', 'datasets\metadata\metadata.csv'))
+LANDMARK_PATH = os.path.join(BASE_DIR, os.getenv('LANDMARK_PATH', 'datasets\landmarks'))
+PROCESSED_PATH = os.path.join(BASE_DIR, os.getenv('PROCESSED_PATH', 'datasets\processed'))
+MODEL_LANDMARK_PATH = os.path.join(BASE_DIR, os.getenv('MODEL_LANDMARK_PATH', 'models\mediapipe\hand_landmarker.task'))
+MODEL_FACE_LANDMARK_PATH = os.path.join(BASE_DIR, os.getenv('MODEL_FACE_LANDMARK_PATH', 'models\mediapipe\face_landmarker.task'))
 MODEL_SAVE_DIR = os.path.join(BASE_DIR, 'models')
 
 # ===== Constants =====
@@ -32,9 +32,9 @@ INTER_HAND_FEATURES = 13
 NUM_FEATURES = RAW_FEATURES + INTER_HAND_FEATURES
 
 # ===== Subject-independent split =====
-TRAIN_PERSONS = ['person_01', 'person_07', 'person_03']
+TRAIN_PERSONS = ['person_01', 'person_02', 'person_03']
 VAL_PERSONS   = ['person_08']
-TEST_PERSONS  = ['person_02']
+TEST_PERSONS  = ['person_07']
 
 # ===== 10 class được chọn =====
 SELECTED_CLASSES = [

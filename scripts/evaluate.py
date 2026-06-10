@@ -8,9 +8,14 @@ Usage:
 
 import sys
 
+# Thiết lập encoding UTF-8 cho stdout/stderr để tránh lỗi hiển thị ký tự Unicode trên Windows
+if sys.platform.startswith('win'):
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+
 
 def main():
-    from src.training.evaluate_final_best import main as evaluate_main
+    from src.training.evaluate_final import main as evaluate_main
     evaluate_main()
 
 

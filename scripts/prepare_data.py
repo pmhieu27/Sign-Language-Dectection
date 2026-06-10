@@ -12,6 +12,11 @@ Usage:
 import argparse
 import sys
 
+# Thiết lập encoding UTF-8 cho stdout/stderr để tránh lỗi hiển thị ký tự Unicode trên Windows
+if sys.platform.startswith('win'):
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
+
 STEPS = ['scan', 'extract', 'preprocess', 'augment']
 
 
