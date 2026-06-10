@@ -37,4 +37,6 @@ models/*.json
 cnn_lstm_history.json
 loc.txt
 uv.lock
-.png
+*.png
+
+!models/cnn_lstm_final.keras

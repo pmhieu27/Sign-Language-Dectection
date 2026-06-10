@@ -540,7 +540,7 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
-    default_model = os.path.join("models", "cnn_lstm_best.keras")
+    default_model = os.path.join("models", "cnn_lstm_final.keras")
     default_encoder = os.path.join("datasets", "processed", "label_encoder.pkl")
 
     missing_files = ensure_required_files()
