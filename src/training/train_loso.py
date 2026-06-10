@@ -1,218 +1,284 @@
 """
-LOSO Cross-Validation (Leave-One-Subject-Out)
-Mỗi fold: 1 người test, 1 người val, còn lại train.
-Chạy trên Colab T4.
+Train the LSTM model with the current final-data pipeline.
 
-Usage: python src/train_loso.py --data_dir /content/drive/MyDrive/sign_language/processed
+Usage:
+    python scripts/train.py lstm
+    python scripts/train.py lstm --epochs 150 --seed 123
 """
 
 import argparse
+import json
 import os
-import numpy as np
 import pickle
 
-import warnings
-warnings.filterwarnings("ignore")
+import numpy as np
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['TF_DETERMINISTIC_OPS'] = '1'
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 import tensorflow as tf
-tf.get_logger().setLevel('ERROR')
-from tensorflow import keras
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
-from src.data.augmentation import (
-    speed_variation, gaussian_jitter, temporal_crop,
-    scale_variation, time_warp, rotation_2d
-)
-from src.training.models import build_cnn_lstm_model
+from tensorflow import keras
 
-FACTOR = 5
+from src.data.augmentation import gaussian_jitter, rotation_2d, speed_variation
+from src.training.models import build_lstm_model
+
 
 def parse_args():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--data_dir', type=str, default=None)
-    parser.add_argument('--epochs', type=int, default=100)
-    parser.add_argument('--batch_size', type=int, default=32)
-    parser.add_argument('--seed', type=int, default=42)
+    parser = argparse.ArgumentParser(description="Train LSTM model")
+    parser.add_argument("--data_dir", type=str, default=None)
+    parser.add_argument("--model_dir", type=str, default=None)
+    parser.add_argument("--epochs", type=int, default=120)
+    parser.add_argument("--batch_size", type=int, default=32)
+    parser.add_argument("--learning_rate", type=float, default=7e-4)
+    parser.add_argument("--val_ratio", type=float, default=0.15)
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--combine-val", dest="combine_val", action="store_true")
+    parser.add_argument("--keep-original-val", dest="combine_val", action="store_false")
+    parser.set_defaults(combine_val=True)
     args = parser.parse_args()
 
+    base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     if args.data_dir is None:
-        base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        args.data_dir = os.path.join(base, 'datasets', 'processed')
+        args.data_dir = os.path.join(base, "datasets", "processed")
+    if args.model_dir is None:
+        args.model_dir = os.path.join(base, "models")
+
+    if not 0 < args.val_ratio < 0.5:
+        raise ValueError("--val_ratio must be between 0 and 0.5")
+
     return args
 
 
 def set_seed(seed):
     np.random.seed(seed)
     tf.keras.utils.set_random_seed(seed)
-    try:
-        tf.config.experimental.enable_op_determinism()
-    except (AttributeError, RuntimeError):
-        pass
 
 
-def augment_data(X, y, seed=123):
-    """Augment trực tiếp trong memory — không lưu file.
-    Comment/uncomment từng dòng augmentation bên dưới để tuỳ chỉnh.
-    
-    Args:
-        seed: Random seed (nên khác nhau cho mỗi fold).
-    """
+def augmentation_ops():
+    return [
+        lambda seq: speed_variation(seq, 0.9),
+        lambda seq: speed_variation(seq, 1.1),
+        lambda seq: gaussian_jitter(seq, sigma=0.02),
+        lambda seq: rotation_2d(seq, max_angle=3),
+    ]
+
+
+def augment_dataset(X, y, seed):
     rng = np.random.default_rng(seed)
-    X_aug, y_aug = [], []
+    ops = augmentation_ops()
 
-    for seq, lbl in zip(X, y):
-        X_aug.append(seq)
-        y_aug.append(lbl)
+    X_aug = []
+    y_aug = []
 
-        X_aug.append(speed_variation(seq, 0.9))
-        y_aug.append(lbl)
+    for seq, label in zip(X, y):
+        X_aug.append(seq.astype(np.float32))
+        y_aug.append(label)
 
-        X_aug.append(speed_variation(seq, 1.1))
-        y_aug.append(lbl)
+        for op in ops:
+            X_aug.append(op(seq).astype(np.float32))
+            y_aug.append(label)
 
-        #nhiễu
-        X_aug.append(gaussian_jitter(seq, sigma=0.02))
-        y_aug.append(lbl)
-
-        X_aug.append(rotation_2d(seq, max_angle=3))
-        y_aug.append(lbl)
+    X_aug = np.asarray(X_aug, dtype=np.float32)
+    y_aug = np.asarray(y_aug)
+    order = rng.permutation(len(X_aug))
+    return X_aug[order], y_aug[order]
 
 
-    X_aug = np.array(X_aug, dtype=np.float32)
-    y_aug = np.array(y_aug)
-    idx = rng.permutation(len(X_aug))
-    return X_aug[idx], y_aug[idx]
+def prepare_splits(args):
+    X_train = np.load(os.path.join(args.data_dir, "X_train.npy"))
+    y_train = np.load(os.path.join(args.data_dir, "y_train.npy"))
+    X_val = np.load(os.path.join(args.data_dir, "X_val.npy"))
+    y_val = np.load(os.path.join(args.data_dir, "y_val.npy"))
+    X_test = np.load(os.path.join(args.data_dir, "X_test.npy"))
+    y_test = np.load(os.path.join(args.data_dir, "y_test.npy"))
+
+    if args.combine_val:
+        X_pool = np.concatenate([X_train, X_val], axis=0)
+        y_pool = np.concatenate([y_train, y_val], axis=0)
+        X_train_base, X_val_internal, y_train_base, y_val_internal = train_test_split(
+            X_pool,
+            y_pool,
+            test_size=args.val_ratio,
+            random_state=args.seed,
+            stratify=y_pool,
+        )
+        split_name = "train+val -> internal validation split"
+    else:
+        X_train_base, y_train_base = X_train, y_train
+        X_val_internal, y_val_internal = X_val, y_val
+        split_name = "original train/val split"
+
+    return (
+        X_train_base,
+        y_train_base,
+        X_val_internal,
+        y_val_internal,
+        X_test,
+        y_test,
+        split_name,
+    )
+
+
+def class_distribution(y, class_names):
+    counts = np.bincount(y, minlength=len(class_names))
+    return {class_names[index]: int(count) for index, count in enumerate(counts)}
+
 
 def main():
     args = parse_args()
     set_seed(args.seed)
+    os.makedirs(args.model_dir, exist_ok=True)
 
-    # Load data
-    X_all = np.load(os.path.join(args.data_dir, 'X_all.npy'))
-    y_all = np.load(os.path.join(args.data_dir, 'y_all.npy'))
-    persons = np.load(os.path.join(args.data_dir, 'persons_all.npy'))
+    with open(os.path.join(args.data_dir, "label_encoder.pkl"), "rb") as handle:
+        label_encoder = pickle.load(handle)
 
-    with open(os.path.join(args.data_dir, 'label_encoder.pkl'), 'rb') as f:
-        le = pickle.load(f)
+    class_names = list(label_encoder.classes_)
+    num_classes = len(class_names)
 
-    # Chỉ lấy 5 người cần dùng
-    SELECTED_PERSONS = ['person_01', 'person_02', 'person_03', 'person_07', 'person_08']
-    mask = np.isin(persons, SELECTED_PERSONS)
-    X_all = X_all[mask]
-    y_all = y_all[mask]
-    persons = persons[mask]
+    (
+        X_train_base,
+        y_train_base,
+        X_val_internal,
+        y_val_internal,
+        X_test,
+        y_test,
+        split_name,
+    ) = prepare_splits(args)
 
-    unique_persons = sorted(set(persons))
-    num_classes = len(le.classes_)
-    input_shape = X_all.shape[1:]
+    X_train_aug, y_train_aug = augment_dataset(X_train_base, y_train_base, seed=args.seed)
 
-    print(f"Data: {X_all.shape}")
-    print(f"Classes: {num_classes}")
-    print(f"Persons: {unique_persons}")
-    print(f"Seed: {args.seed}")
-    print(f"\n{'='*60}")
-    print(f"  LOSO Cross-Validation ({len(unique_persons)} folds)")
-    print(f"{'='*60}\n")
+    seq_len = X_train_aug.shape[1]
+    num_features = X_train_aug.shape[2]
 
-    fold_results = []
+    print(f"Loading data from: {args.data_dir}")
+    print(f"Split mode: {split_name}")
+    print(f"Base train: {X_train_base.shape}")
+    print(f"Val used:   {X_val_internal.shape}")
+    print(f"Test held:  {X_test.shape}")
+    print(f"Train aug:  {X_train_aug.shape}")
+    print(f"Classes:    {num_classes}")
+    print(f"Seed:       {args.seed}")
+    print(f"Train labels: {class_distribution(y_train_base, class_names)}")
+    print(f"Val labels:   {class_distribution(y_val_internal, class_names)}")
 
-    for fold_idx, test_person in enumerate(unique_persons):
-        fold_seed = args.seed + fold_idx
-        set_seed(fold_seed)
-        print(f"\n--- Fold {fold_idx+1}/{len(unique_persons)}: Test = {test_person} ---")
-        print(f"  Seed:  {fold_seed}")
+    unique_classes = np.unique(y_train_aug)
+    class_weights = compute_class_weight(
+        class_weight="balanced",
+        classes=unique_classes,
+        y=y_train_aug,
+    )
+    class_weight_dict = dict(zip(unique_classes, class_weights))
 
-        # Split
-        test_mask = persons == test_person
-        remaining = [p for p in unique_persons if p != test_person]
+    model = build_lstm_model(seq_len, num_features, num_classes, name="LSTM_SignLanguage_Final")
+    model.compile(
+        optimizer=keras.optimizers.Adam(learning_rate=args.learning_rate),
+        loss="sparse_categorical_crossentropy",
+        metrics=["accuracy"],
+    )
 
-        # Val = người có ít data nhất trong remaining
-        remaining_counts = {p: np.sum(persons == p) for p in remaining}
-        val_person = min(remaining_counts, key=remaining_counts.get)
-        val_mask = persons == val_person
-        train_mask = ~test_mask & ~val_mask
+    model_path = os.path.join(args.model_dir, "lstm_final.keras")
+    history_path = os.path.join(args.model_dir, "lstm_final_history.json")
+    metadata_path = os.path.join(args.model_dir, "lstm_final_metadata.json")
+    report_path = os.path.join(args.model_dir, "lstm_final_test_report.json")
 
-        X_test_fold = X_all[test_mask]
-        y_test_fold = y_all[test_mask]
-        X_val_fold = X_all[val_mask]
-        y_val_fold = y_all[val_mask]
-        X_train_fold = X_all[train_mask]
-        y_train_fold = y_all[train_mask]
+    callbacks = [
+        keras.callbacks.EarlyStopping(
+            monitor="val_loss",
+            patience=15,
+            restore_best_weights=True,
+            verbose=1,
+        ),
+        keras.callbacks.ReduceLROnPlateau(
+            monitor="val_loss",
+            factor=0.5,
+            patience=5,
+            min_lr=1e-6,
+            verbose=1,
+        ),
+        keras.callbacks.ModelCheckpoint(
+            filepath=model_path,
+            monitor="val_accuracy",
+            save_best_only=True,
+            mode="max",
+            verbose=1,
+        ),
+    ]
 
-        # Augment train
-        X_train_aug, y_train_aug = augment_data(X_train_fold, y_train_fold, seed=fold_seed)
+    print(
+        f"Training LSTM model (epochs={args.epochs}, batch_size={args.batch_size}, "
+        f"learning_rate={args.learning_rate})..."
+    )
+    history = model.fit(
+        X_train_aug,
+        y_train_aug,
+        validation_data=(X_val_internal, y_val_internal),
+        epochs=args.epochs,
+        batch_size=args.batch_size,
+        class_weight=class_weight_dict,
+        callbacks=callbacks,
+        verbose=1,
+    )
 
-        print(f"  Train: {len(X_train_aug)} (aug from {len(X_train_fold)})")
-        print(f"  Val:   {len(X_val_fold)} ({val_person})")
-        print(f"  Test:  {len(X_test_fold)}")
+    best_model = keras.models.load_model(model_path)
+    test_loss, test_accuracy = best_model.evaluate(X_test, y_test, verbose=0)
+    y_pred = best_model.predict(X_test, verbose=0).argmax(axis=1)
+    report = classification_report(
+        y_test,
+        y_pred,
+        target_names=class_names,
+        output_dict=True,
+        zero_division=0,
+    )
 
-        # Class weights
-        unique_classes = np.unique(y_train_aug)
-        cw = compute_class_weight('balanced', classes=unique_classes, y=y_train_aug)
-        cw_dict = dict(zip(unique_classes, cw))
+    history_data = {key: [float(v) for v in values] for key, values in history.history.items()}
+    with open(history_path, "w", encoding="utf-8") as handle:
+        json.dump(history_data, handle, ensure_ascii=False, indent=2)
+    with open(report_path, "w", encoding="utf-8") as handle:
+        json.dump(report, handle, ensure_ascii=False, indent=2)
 
-        # Build & train
-        model = build_cnn_lstm_model(input_shape[0], input_shape[1], num_classes, name='CNN1D_LSTM_LOSO')
-        model.compile(
-            optimizer=Adam(learning_rate=7e-4),
-            loss='sparse_categorical_crossentropy',
-            metrics=['accuracy']
-        )
+    metadata = {
+        "split_mode": split_name,
+        "combine_val": args.combine_val,
+        "val_ratio": args.val_ratio,
+        "seed": args.seed,
+        "epochs": args.epochs,
+        "batch_size": args.batch_size,
+        "learning_rate": args.learning_rate,
+        "augmentation": [
+            "speed_variation_0.9",
+            "speed_variation_1.1",
+            "gaussian_jitter_0.02",
+            "rotation_3deg",
+        ],
+        "base_train_shape": list(X_train_base.shape),
+        "train_aug_shape": list(X_train_aug.shape),
+        "val_shape": list(X_val_internal.shape),
+        "test_shape": list(X_test.shape),
+        "num_classes": num_classes,
+        "class_names": class_names,
+        "best_val_accuracy": float(max(history.history["val_accuracy"])),
+        "best_val_loss": float(min(history.history["val_loss"])),
+        "test_accuracy": float(test_accuracy),
+        "test_loss": float(test_loss),
+    }
+    with open(metadata_path, "w", encoding="utf-8") as handle:
+        json.dump(metadata, handle, ensure_ascii=False, indent=2)
 
-        ckpt_path = os.path.join(args.data_dir, f'loso_fold{fold_idx}_temp.keras')
-        callbacks = [
-            EarlyStopping(monitor='val_loss', patience=15, restore_best_weights=False, verbose=0),
-            ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-6, verbose=0),
-            ModelCheckpoint(ckpt_path, monitor='val_accuracy', save_best_only=True, mode='max', verbose=0),
-        ]
-
-        model.fit(
-            X_train_aug, y_train_aug,
-            validation_data=(X_val_fold, y_val_fold),
-            epochs=args.epochs,
-            batch_size=args.batch_size,
-            class_weight=cw_dict,
-            callbacks=callbacks,
-            verbose=0
-        )
-
-        # Load best checkpoint và evaluate
-        model.load_weights(ckpt_path)
-        y_pred = model.predict(X_test_fold, verbose=0).argmax(axis=1)
-        acc = np.mean(y_pred == y_test_fold)
-        fold_results.append(acc)
-
-        # Xóa file tạm
-        if os.path.exists(ckpt_path):
-            os.remove(ckpt_path)
-
-        print(f"  ✓ Accuracy: {acc:.4f} ({acc*100:.1f}%)")
-
-        # Cleanup để giải phóng GPU memory
-        del model
-        tf.keras.backend.clear_session()
-
-    # ===== KẾT QUẢ TỔNG =====
-    accs = np.array(fold_results)
-    print(f"\n{'='*60}")
-    print(f"  KẾT QUẢ LOSO ({len(unique_persons)} folds)")
-    print(f"{'='*60}")
-    for i, (person, acc) in enumerate(zip(unique_persons, fold_results)):
-        bar = '█' * int(acc * 30)
-        print(f"  Fold {i+1} ({person}): {acc*100:5.1f}% |{bar}|")
-    print(f"{'='*60}")
-    print(f"  Trung bình:  {accs.mean()*100:.1f}%")
-    print(f"  Độ lệch:     ±{accs.std()*100:.1f}%")
-    print(f"  Min:          {accs.min()*100:.1f}%")
-    print(f"  Max:          {accs.max()*100:.1f}%")
-    print(f"{'='*60}")
+    print("\n" + "=" * 60)
+    print("LSTM TRAINING COMPLETE")
+    print(f"Best val_accuracy: {metadata['best_val_accuracy']:.4f}")
+    print(f"Best val_loss:     {metadata['best_val_loss']:.4f}")
+    print(f"Test accuracy:     {metadata['test_accuracy']:.4f}")
+    print(f"Test loss:         {metadata['test_loss']:.4f}")
+    print(f"Model saved:       {model_path}")
+    print(f"History saved:     {history_path}")
+    print(f"Metadata saved:    {metadata_path}")
+    print(f"Test report saved: {report_path}")
+    print("=" * 60)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
