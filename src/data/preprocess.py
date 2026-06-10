@@ -35,6 +35,9 @@ def _reshape_hand(block):
 
 
 def compute_inter_hand_features(left_block, right_block, presence):
+    """
+    Tính toán các đặc trưng liên quan đến tương tác giữa hai tay
+    """
     left = _reshape_hand(left_block)
     right = _reshape_hand(right_block)
 

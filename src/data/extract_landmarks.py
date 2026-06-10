@@ -32,6 +32,9 @@ def extract_face_anchors(face_landmarks):
 
 
 def create_face_landmarker():
+    """
+    Gọi mô hình nhận diện khuôn mặt
+    """
     BaseOptions = mp.tasks.BaseOptions
     FaceLandmarker = mp.tasks.vision.FaceLandmarker
     FaceLandmarkerOptions = mp.tasks.vision.FaceLandmarkerOptions
@@ -51,6 +54,9 @@ def create_face_landmarker():
 
 
 def build_hand_blocks(result):
+    """
+    Xây dựng khối dữ liệu từ kết quả nhận diện tay
+    """
     left_block = np.zeros(NUM_HAND_LANDMARKS * 3, dtype=np.float32)
     right_block = np.zeros(NUM_HAND_LANDMARKS * 3, dtype=np.float32)
     presence = np.zeros(2, dtype=np.float32)
@@ -71,7 +77,7 @@ def build_hand_blocks(result):
             left_block = hand_vector
             presence[0] = 1.0
         elif handedness == 'right':
-            right_block = hand_vector
+            right_block = hand_vector               
             presence[1] = 1.0
         elif presence[0] == 0.0:
             left_block = hand_vector

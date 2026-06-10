@@ -1,31 +1,16 @@
 label_id,label_name
-1,1
-2,2
-3,3
-4,Anh chị
-5,Buồn
-6,Bạn bè
-7,Bố
-8,Có
-9,Cảm ơn
-10,Em
-11,Giúp đỡ
+0,Có
+1,Cảm ơn
+2,Hạnh phúc
+3,Không
+4,Tôi
+5,Tạm biệt
+6,Uống
+7,Xin chào
+8,Xin lỗi
+9,Ăn
+10,Bố
+11,Bạn bè
 12,Hiểu
-13,Hạnh phúc
-14,Học
-15,Khát
-16,Không
-17,Làm việc
-18,Mẹ
-19,Mệt
-20,Ngủ
-21,Thích
-22,Tôi
-23,Tạm biệt
-24,Uống
-25,Xin chào
-26,Xin lỗi
-27,Ăn
-28,Đau
-29,Đi
-30,Đói
+13,Học
+14,Thích
