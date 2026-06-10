@@ -195,7 +195,6 @@ def load_assets(model_path, label_encoder_path):
         label_encoder_path=label_encoder_path,
     )
 
-/**function dựng để test nhanh sequence landmark đã trích xuất có thể dự đoán được không, không liên quan đến luồng chính của app nên để riêng ra 1 function */
 def predict_from_sequence(sequence, assets):
     if sequence is None or len(sequence) == 0:
         return None
