@@ -3,6 +3,7 @@ import pickle
 import tempfile
 import time
 import textwrap
+import requests
 from collections import deque
 from dataclasses import dataclass
 
@@ -162,6 +163,24 @@ def create_face_landmarker(running_mode):
         output_facial_transformation_matrixes=False,
     )
     return FaceLandmarker.create_from_options(options)
+
+
+METERED_API_URL = "https://signlanguagerecog.metered.live/api/v1/turn/credentials?apiKey=343310862d18295c1bac21748c7ff2429ee2"
+
+
+@st.cache_data(ttl=3600)
+def get_ice_servers():
+    """Fetch TURN/STUN credentials from Metered.ca API (cached 1 hour)."""
+    try:
+        resp = requests.get(METERED_API_URL, timeout=10)
+        resp.raise_for_status()
+        ice_servers = resp.json()
+        if ice_servers:
+            return ice_servers
+    except Exception as e:
+        print(f"Warning: Failed to fetch TURN credentials: {e}")
+    # Fallback to free STUN only
+    return [{"urls": ["stun:stun.l.google.com:19302"]}]
 
 
 @st.cache_resource
@@ -595,25 +614,7 @@ def main():
                     video_processor_factory=lambda: SignVideoProcessor(assets),
                     media_stream_constraints={"video": True, "audio": False},
                     rtc_configuration={
-                        "iceServers": [
-                            {"urls": ["stun:stun.l.google.com:19302"]},
-                            {"urls": ["stun:openrelay.metered.ca:80"]},
-                            {
-                                "urls": ["turn:openrelay.metered.ca:80"],
-                                "username": "openrelayproject",
-                                "credential": "openrelayproject",
-                            },
-                            {
-                                "urls": ["turn:openrelay.metered.ca:443"],
-                                "username": "openrelayproject",
-                                "credential": "openrelayproject",
-                            },
-                            {
-                                "urls": ["turn:openrelay.metered.ca:443?transport=tcp"],
-                                "username": "openrelayproject",
-                                "credential": "openrelayproject",
-                            },
-                        ]
+                        "iceServers": get_ice_servers()
                     },
                     async_processing=True,
                 )
