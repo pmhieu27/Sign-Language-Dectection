@@ -6,15 +6,19 @@ try:
     import cv2
 except ImportError:
     import subprocess
-    print("Detected missing OpenCV dependencies. Reinstalling opencv-python-headless...", file=sys.stderr)
+    import site
+    print("Detected missing OpenCV dependencies. Reinstalling opencv-python-headless to user directory...", file=sys.stderr)
     try:
         subprocess.run([
             sys.executable, "-m", "pip", "install", 
-            "--upgrade", "--force-reinstall", 
+            "--user", "--upgrade", "--force-reinstall", 
             "opencv-python-headless==4.10.0.84"
         ], check=True)
+        user_site = site.getusersitepackages()
+        if user_site not in sys.path:
+            sys.path.insert(0, user_site)
         import cv2
-        print("Successfully reinstalled opencv-python-headless!", file=sys.stderr)
+        print("Successfully reinstalled opencv-python-headless to user directory!", file=sys.stderr)
     except Exception as e:
         print(f"Failed to reinstall opencv-python-headless: {e}", file=sys.stderr)
 
