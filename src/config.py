@@ -6,7 +6,7 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ===== Paths =====
-DATASET_ROOT = os.path.join(BASE_DIR, os.getenv('DATASET_ROOT', 'datasets\  dataset'))
+DATASET_ROOT = os.path.join(BASE_DIR, os.getenv('DATASET_ROOT', 'datasets\dataset'))
 METADATA_PATH = os.path.join(BASE_DIR, os.getenv('METADATA_PATH', 'datasets\metadata\metadata.csv'))
 LANDMARK_PATH = os.path.join(BASE_DIR, os.getenv('LANDMARK_PATH', 'datasets\landmarks'))
 PROCESSED_PATH = os.path.join(BASE_DIR, os.getenv('PROCESSED_PATH', 'datasets\processed'))

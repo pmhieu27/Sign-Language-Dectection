@@ -22,8 +22,9 @@ venv/
 # Dataset — quá nặng, không push
 datasets/dataset/
 datasets/landmarks/
+datasets/processed/
 
-# Model weights — chỉ push mediapipe tasks
+# Model weights - chỉ push mediapipe tasks
 models/*.keras
 models/*.h5
 models/*.pt
@@ -36,3 +37,4 @@ models/*.json
 cnn_lstm_history.json
 loc.txt
 uv.lock
+.png
