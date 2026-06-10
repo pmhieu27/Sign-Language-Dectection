@@ -2,8 +2,8 @@ av==15.1.0
 numpy==1.26.4
 python-dotenv>=0.9.9
 matplotlib>=3.9.0
-mediapipe==0.10.14
 opencv-python-headless==4.10.0.84
+mediapipe==0.10.14
 pandas>=2.3.3
 scikit-learn>=1.7.2
 scipy>=1.15.3
