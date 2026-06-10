@@ -302,6 +302,10 @@ class SignVideoProcessor(VideoProcessorBase):
 
         if self.latest_face_vector is not None:
             left_block, right_block, presence, left_lms, right_lms = build_hand_blocks(hand_result)
+            # Đảo tay trái/phải vì ảnh webcam đã bị flip (chế độ gương)
+            left_block, right_block = right_block, left_block
+            presence = np.array([presence[1], presence[0]], dtype=np.float32)
+            left_lms, right_lms = right_lms, left_lms
             self.current_presence = presence
             hands_to_draw = []
             if left_lms is not None:
