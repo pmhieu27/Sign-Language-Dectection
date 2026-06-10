@@ -203,7 +203,7 @@ def predict_from_sequence(sequence, assets):
     normalized = normalize_sequence(raw_seq)
     normalized = pad_or_sample(normalized, SEQ_LEN)
     input_data = np.expand_dims(normalized, axis=0).astype(np.float32)
-    predictions = assets.model.predict(input_data, verbose=0)[0]
+    predictions = assets.model(input_data, training=False).numpy()[0]
     best_index = int(np.argmax(predictions))
     return {
         "label": assets.label_encoder.classes_[best_index],
@@ -267,6 +267,7 @@ class SignVideoProcessor(VideoProcessorBase):
         self.confidence = 0.0
         self.current_presence = np.zeros(2, dtype=np.float32)
         self.frame_index = 0
+        self.inference_counter = 0
 
         # UI Metrics
         self.top_k_predictions = []
@@ -320,26 +321,28 @@ class SignVideoProcessor(VideoProcessorBase):
                 self.sequence_buffer.popleft()
 
             if len(self.sequence_buffer) == SEQ_LEN:
-                t_pred_start = time.time()
-                result = predict_from_sequence(np.array(self.sequence_buffer, dtype=np.float32), self.assets)
-                self.latency = (time.time() - t_pred_start) * 1000
-                if result is not None:
-                    self.predicted_label = result["label"]
-                    self.confidence = result["confidence"]
+                self.inference_counter += 1
+                if self.inference_counter % 5 == 0:
+                    t_pred_start = time.time()
+                    result = predict_from_sequence(np.array(self.sequence_buffer, dtype=np.float32), self.assets)
+                    self.latency = (time.time() - t_pred_start) * 1000
+                    if result is not None:
+                        self.predicted_label = result["label"]
+                        self.confidence = result["confidence"]
 
-                    # Extract Top 3
-                    class_names = list(self.assets.label_encoder.classes_)
-                    probs = result["probabilities"]
-                    top_indices = np.argsort(probs)[::-1][:3]
-                    self.top_k_predictions = [(class_names[idx], float(probs[idx])) for idx in top_indices]
+                        # Extract Top 3
+                        class_names = list(self.assets.label_encoder.classes_)
+                        probs = result["probabilities"]
+                        top_indices = np.argsort(probs)[::-1][:3]
+                        self.top_k_predictions = [(class_names[idx], float(probs[idx])) for idx in top_indices]
 
-                    # Append to History if confidence > 0.6
-                    if self.confidence >= 0.6:
-                        if self.predicted_label != self.last_stable_label:
-                            self.last_stable_label = self.predicted_label
-                            self.history.append((self.predicted_label, self.confidence))
-                            if len(self.history) > 10:
-                                self.history.pop(0)
+                        # Append to History if confidence > 0.6
+                        if self.confidence >= 0.6:
+                            if self.predicted_label != self.last_stable_label:
+                                self.last_stable_label = self.predicted_label
+                                self.history.append((self.predicted_label, self.confidence))
+                                if len(self.history) > 10:
+                                    self.history.pop(0)
 
         # FPS Calculation
         self.frame_times.append(time.time())
