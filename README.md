@@ -135,7 +135,7 @@ Mặc định script sẽ:
 
 File huấn luyện chính:
 
-- `src/training/train_best_final.py`
+- `src/training/train_final.py`
 
 ## 6. Đánh giá mô hình
 
@@ -169,51 +169,41 @@ Evaluator sẽ:
 
 ## 7. Chạy Streamlit
 
-### 7.1. Chạy local
+### 7.1. Chạy local (Không cần TURN server ngoài)
 
-Sau khi đã có:
-
-- `models/cnn_lstm_final.keras`
-- `datasets/processed/label_encoder.pkl`
-- `models/mediapipe/hand_landmarker.task`
-- `models/mediapipe/face_landmarker.task`
+Bản local đã được tối ưu hóa để chạy trực tiếp trên máy của bạn (localhost) mà không cần cấu hình TURN server trung gian, giúp kết nối webcam nhanh và mượt hơn 100%.
 
 chạy:
 
 ```bash
-streamlit run app.py
+streamlit run app_local.py
+# Hoặc nếu sử dụng uv:
+uv run streamlit run app_local.py
 ```
 
-App mặc định sẽ dùng:
+App local mặc định sẽ dùng:
 
+- script gốc: `src/apps/streamlit_app_local.py`
 - model: `models/cnn_lstm_final.keras`
 - label encoder: `datasets/processed/label_encoder.pkl`
 
 ### 7.2. Deploy lên Streamlit Community Cloud
 
-Repo đã được chuẩn bị sẵn các file:
+File `app.py` là entrypoint dành riêng khi deploy lên Streamlit Cloud. Bản này tích hợp các cơ chế nâng cao:
 
-- `app.py`: entrypoint cho Streamlit
-- `.streamlit/config.toml`: cấu hình server
-- `requirements.txt`: dependency để cài trên môi trường deploy
+- **Tự động sửa lỗi OpenCV nhị phân (`libgthread-2.0.so.0`):** Tự động tải bản `opencv-python-headless` tương thích vào thư mục `libs/` cục bộ tại runtime để vượt qua lỗi thiếu thư viện của server Streamlit.
+- **Tích hợp Metered.ca TURN API:** Tự động gọi API của Metered.ca để lấy thông tin TURN/STUN credentials tạm thời giúp người dùng kết nối camera từ xa qua mạng Internet (traversal qua NAT/Firewall).
 
-Khi deploy, chọn:
+Khi deploy lên Streamlit Cloud, cấu hình:
 
 - **Main file path**: `app.py`
 
-Lưu ý:
+Lưu ý các file cần thiết trên Git:
 
-- bạn vẫn cần đưa các file model và MediaPipe task cần thiết lên nơi deploy
-- app cần ít nhất các file:
-  - `models/cnn_lstm_final.keras`
-  - `datasets/processed/label_encoder.pkl`
-  - `models/mediapipe/hand_landmarker.task`
-  - `models/mediapipe/face_landmarker.task`
-
-Nếu không muốn public model/dataset lớn, bạn có thể:
-
-- deploy nội bộ / server riêng
-- hoặc upload riêng các file model cần thiết lên môi trường chạy
+- `models/cnn_lstm_final.keras`
+- `datasets/processed/label_encoder.pkl`
+- `models/mediapipe/hand_landmarker.task`
+- `models/mediapipe/face_landmarker.task`
 
 ## 8. File đầu ra quan trọng
 
@@ -228,15 +218,17 @@ Sau khi train model cuối, các file chính sẽ nằm trong `models/`:
 
 Thứ tự chạy khuyến nghị:
 
-1. Chuẩn bị dữ liệu bằng `scripts/prepare_data.py`
+1. Chuẩn bị dữ liệu bằng `scripts/prepare_data.py` (hoặc dùng `uv run python...`)
 2. Dùng `python scripts/train.py loso` để tuning
 3. Chốt config tốt nhất
-4. Chạy `python scripts/train.py final`
+4. Chạy `python scripts/train.py final` (thêm `--train-on-all` nếu muốn train toàn bộ dữ liệu của cả 5 người để mang đi deploy)
 5. Chạy `python scripts/evaluate.py`
-6. Chạy `streamlit run app.py`
+6. Chạy local để test: `streamlit run app_local.py`
+7. Push code lên GitHub để Streamlit Cloud tự cập nhật ứng dụng `app.py`
 
 ## 10. Ghi chú
 
 - Nên đánh giá bằng `LOSO` trong giai đoạn tuning thay vì chỉ nhìn một split cố định.
 - Khi xác nhận một cấu hình tốt, nên chạy nhiều seed để kiểm tra độ ổn định.
 - Nếu thêm person hoặc thêm class, hãy chạy lại pipeline `scan -> extract -> preprocess`.
+- Để tránh lỗi đè file đang bị chiếm dụng trên Windows (OSError [Errno 22]), hãy **tắt Streamlit trước khi chạy lại lệnh train**.
