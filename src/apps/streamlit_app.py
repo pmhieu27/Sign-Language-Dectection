@@ -195,7 +195,6 @@ def load_assets(model_path, label_encoder_path):
         label_encoder_path=label_encoder_path,
     )
 
-
 def predict_from_sequence(sequence, assets):
     if sequence is None or len(sequence) == 0:
         return None
