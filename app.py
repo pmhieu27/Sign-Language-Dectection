@@ -8,8 +8,11 @@ except ImportError:
     import subprocess
     print("Detected missing OpenCV dependencies. Reinstalling opencv-python-headless...", file=sys.stderr)
     try:
-        subprocess.run([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-python-headless", "opencv-contrib-python", "opencv-contrib-python-headless"], check=True)
-        subprocess.run([sys.executable, "-m", "pip", "install", "opencv-python-headless==4.10.0.84"], check=True)
+        subprocess.run([
+            sys.executable, "-m", "pip", "install", 
+            "--upgrade", "--force-reinstall", 
+            "opencv-python-headless==4.10.0.84"
+        ], check=True)
         import cv2
         print("Successfully reinstalled opencv-python-headless!", file=sys.stderr)
     except Exception as e:
