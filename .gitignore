@@ -40,3 +40,4 @@ uv.lock
 *.png
 
 !models/cnn_lstm_final.keras
+!datasets/processed/label_encoder.pkl
