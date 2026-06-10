@@ -48,12 +48,26 @@ Mỗi thư mục `person_xx` chứa các thư mục nhãn, mỗi nhãn chứa c�
 
 ## 3. Cài đặt
 
-Tạo môi trường và cài thư viện theo cách bạn đang dùng cho project. Nếu đã có `.venv` thì chỉ cần kích hoạt môi trường trước khi chạy.
+Tạo môi trường và cài thư viện theo cách bạn đang dùng cho project.
+```powershell
+pip intall virtualenv
+```
+
+Sau đó tạo môi trường ảo
+```powershell
+python -m venv venv
+```
+ Nếu đã có `venv` thì chỉ cần kích hoạt môi trường trước khi chạy.
 
 Ví dụ trên Windows PowerShell:
 
 ```powershell
-.venv\Scripts\Activate.ps1
+venv\Scripts\Activate.ps1
+```
+
+Khi kích hoạt môi trường ảo thành côn, cài đặt các thư viện cần thiết
+```powershell
+pip install -r requirements.txt
 ```
 
 ## 4. Chuẩn bị dữ liệu huấn luyện
@@ -170,8 +184,6 @@ Evaluator sẽ:
 ## 7. Chạy Streamlit
 
 ### 7.1. Chạy local (Không cần TURN server ngoài)
-
-Bản local đã được tối ưu hóa để chạy trực tiếp trên máy của bạn (localhost) mà không cần cấu hình TURN server trung gian, giúp kết nối webcam nhanh và mượt hơn 100%.
 
 chạy:
 
