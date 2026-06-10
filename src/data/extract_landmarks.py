@@ -1,5 +1,5 @@
 """
-Step 2: Trich xuat landmarks tu video bang MediaPipe (Multiprocessing)
+Step 2: Trích xuất landmarks từ video bằng MediaPipe (Multiprocessing)
 
 Usage: python src/extract_landmarks.py
 """
@@ -23,7 +23,7 @@ from src.config import (
 
 
 def extract_face_anchors(face_landmarks):
-    """Lay mot tap moc mat nho de bo sung vi tri tay tuong doi voi mat."""
+    """Lấy một tập mốc mặt nhỏ để bổ sung vị trí tay tương đối với mặt."""
     return np.array(
         [[face_landmarks[idx].x, face_landmarks[idx].y, face_landmarks[idx].z]
          for idx in FACE_ANCHOR_INDICES],
@@ -84,7 +84,7 @@ def build_hand_blocks(result):
 
 
 def process_video(row):
-    """Xu ly 1 video: doc frame -> detect -> luu landmark .npy"""
+    """Xử lý 1 video: đọc frame -> detect -> lưu landmark .npy"""
     try:
         video_id = row['id']
         label = row['label']
@@ -164,15 +164,15 @@ def process_video(row):
 
 def main():
     if not os.path.exists(MODEL_FACE_LANDMARK_PATH):
-        print(f"Loi: Khong tim thay file face landmarker tai: {MODEL_FACE_LANDMARK_PATH}")
-        print("Can them model mat (.task) de trich xuat feature mat.")
+        print(f"Loi: Không tìm thấy file face landmarker tại: {MODEL_FACE_LANDMARK_PATH}")
+        print("Cần thêm model mặt (.task) để trích xuất feature mặt.")
         return
 
     os.makedirs(LANDMARK_PATH, exist_ok=True)
 
     df = pd.read_csv(METADATA_PATH)
-    print(f"Tong so video can xu ly: {len(df)}")
-    print("Bat dau extract landmarks...\n")
+    print(f"Tổng số video cần xử lý: {len(df)}")
+    print("Bắt đầu extract landmarks...\n")
 
     tasks = df.to_dict('records')
     ok, skip, fail = 0, 0, 0
@@ -199,23 +199,23 @@ def main():
                 pbar.update(1)
 
     print(f"\n{'=' * 50}")
-    print("HOAN THANH")
+    print("HOÀN THÀNH")
     print(f"  OK    : {ok}")
     print(f"  Skip  : {skip}")
     print(f"  Fail  : {fail}")
     print(f"{'=' * 50}")
 
     if skip_list:
-        print("\nDanh sach SKIP:")
+        print("\nDanh sách SKIP:")
         for item in skip_list:
             print(f"  - {item}")
 
     if fail_list:
-        print("\nDanh sach FAIL:")
+        print("\nDanh sách FAIL:")
         for item in fail_list:
             print(f"  - {item}")
 
-    print(f"\nLandmark luu tai: {LANDMARK_PATH}")
+    print(f"\nLandmark lưu tại: {LANDMARK_PATH}")
 
 
 if __name__ == '__main__':

@@ -42,9 +42,10 @@ def parse_args():
     parser.add_argument("--learning_rate", type=float, default=7e-4)
     parser.add_argument("--val_ratio", type=float, default=0.15)
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--combine-val", dest="combine_val", action="store_true")
-    parser.add_argument("--keep-original-val", dest="combine_val", action="store_false")
+    parser.add_argument("--combine-val", dest="combine_val", action="store_true", help="gộp train + val rồi chia lại theo tỉ lệ") #gộp train + val rồi chia lại theo tỉ lệ
+    parser.add_argument("--keep-original-val", dest="combine_val", action="store_false", help="giữ nguyên chia theo người") # giữ nguyên chia theo người
     parser.set_defaults(combine_val=True)
+    parser.add_argument("--train-on-all", action="store_true", help="Train trên cả 5 người")
     args = parser.parse_args()
 
     base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -117,28 +118,42 @@ def augment_dataset(X, y, seed):
 
 
 def prepare_splits(args):
-    X_train = np.load(os.path.join(args.data_dir, "X_train.npy"))
-    y_train = np.load(os.path.join(args.data_dir, "y_train.npy"))
-    X_val = np.load(os.path.join(args.data_dir, "X_val.npy"))
-    y_val = np.load(os.path.join(args.data_dir, "y_val.npy"))
-    X_test = np.load(os.path.join(args.data_dir, "X_test.npy"))
-    y_test = np.load(os.path.join(args.data_dir, "y_test.npy"))
-
-    if args.combine_val:
-        X_pool = np.concatenate([X_train, X_val], axis=0)
-        y_pool = np.concatenate([y_train, y_val], axis=0)
+    if args.train_on_all:
+        X_all = np.load(os.path.join(args.data_dir, "X_all.npy"))
+        y_all = np.load(os.path.join(args.data_dir, "y_all.npy"))
         X_train_base, X_val_internal, y_train_base, y_val_internal = train_test_split(
-            X_pool,
-            y_pool,
+            X_all,
+            y_all,
             test_size=args.val_ratio,
             random_state=args.seed,
-            stratify=y_pool,
+            stratify=y_all,
         )
-        split_name = "train+val -> internal validation split"
+        X_test = X_val_internal
+        y_test = y_val_internal
+        split_name = "train on all subjects (pooled X_all) -> internal validation split"
     else:
-        X_train_base, y_train_base = X_train, y_train
-        X_val_internal, y_val_internal = X_val, y_val
-        split_name = "original train/val split"
+        X_train = np.load(os.path.join(args.data_dir, "X_train.npy"))
+        y_train = np.load(os.path.join(args.data_dir, "y_train.npy"))
+        X_val = np.load(os.path.join(args.data_dir, "X_val.npy"))
+        y_val = np.load(os.path.join(args.data_dir, "y_val.npy"))
+        X_test = np.load(os.path.join(args.data_dir, "X_test.npy"))
+        y_test = np.load(os.path.join(args.data_dir, "y_test.npy"))
+
+        if args.combine_val:
+            X_pool = np.concatenate([X_train, X_val], axis=0)
+            y_pool = np.concatenate([y_train, y_val], axis=0)
+            X_train_base, X_val_internal, y_train_base, y_val_internal = train_test_split(
+                X_pool,
+                y_pool,
+                test_size=args.val_ratio,
+                random_state=args.seed,
+                stratify=y_pool,
+            )
+            split_name = "train+val -> internal validation split"
+        else:
+            X_train_base, y_train_base = X_train, y_train
+            X_val_internal, y_val_internal = X_val, y_val
+            split_name = "original train/val split"
 
     return (
         X_train_base,

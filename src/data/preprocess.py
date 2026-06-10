@@ -1,5 +1,5 @@
 """
-Step 3: Normalize landmarks + pad/sample + split theo person (subject-independent)
+Step 3: Chuẩn hóa landmarks + pad/sample + chia theo person (subject-independent)
 
 Usage: python src/preprocess.py
 """
@@ -105,20 +105,20 @@ def normalize_sequence(seq):
 
 
 def pad_or_sample(seq, target_len):
-    """Dua sequence ve chieu dai co dinh."""
+    """Đưa sequence về chiều dài cố định."""
     n = len(seq)
     if n >= target_len:
-        # Uniform sampling: lay target_len frame deu nhau
+        # Uniform sampling: lấy target_len frame đều nhau
         idx = np.linspace(0, n - 1, target_len).astype(int)
         return seq[idx]
     else:
-        # Padding: lap frame cuoi
+        # Padding: lặp frame cuối
         pad = np.tile(seq[-1], (target_len - n, 1))
         return np.concatenate([seq, pad], axis=0)
 
 
 def preprocess():
-    """Load landmarks, normalize, pad, split va luu."""
+    """Load landmarks, normalize, pad, split và lưu."""
     os.makedirs(PROCESSED_PATH, exist_ok=True)
 
     df = pd.read_csv(METADATA_PATH)
@@ -147,7 +147,7 @@ def preprocess():
         # Normalize
         seq = normalize_sequence(seq)
 
-        # Pad hoac sample ve SEQ_LEN
+        # Pad hoặc sample về SEQ_LEN
         seq = pad_or_sample(seq, SEQ_LEN)
 
         sequences.append(seq)
@@ -193,7 +193,7 @@ def preprocess():
     np.save(os.path.join(PROCESSED_PATH, 'X_test.npy'),  X_test)
     np.save(os.path.join(PROCESSED_PATH, 'y_test.npy'),  y_test)
 
-    # Luu ALL (cho LOSO cross-validation)
+    # Lưu ALL (cho LOSO cross-validation)
     np.save(os.path.join(PROCESSED_PATH, 'X_all.npy'), sequences)
     np.save(os.path.join(PROCESSED_PATH, 'y_all.npy'), y)
     np.save(os.path.join(PROCESSED_PATH, 'persons_all.npy'), persons)

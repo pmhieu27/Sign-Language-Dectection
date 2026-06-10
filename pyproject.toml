@@ -14,7 +14,8 @@ dependencies = [
     "pandas>=2.3.3",
     "scikit-learn>=1.7.2",
     "scipy>=1.15.3",
-    "tensorflow-cpu==2.16.1",
+    "tensorflow-cpu==2.16.1; sys_platform != 'win32'",
+    "tensorflow-intel==2.16.1; sys_platform == 'win32'",
     "streamlit>=1.45.1",
     "streamlit-webrtc==0.72.1",
     "tqdm>=4.67.3",
@@ -29,3 +30,9 @@ packages = ["src"]
 
 [tool.pyrefly]
 project-includes = ["src"]
+
+[tool.uv]
+environments = [
+    "sys_platform == 'win32' and platform_machine == 'AMD64'",
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+]

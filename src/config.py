@@ -33,8 +33,8 @@ NUM_FEATURES = RAW_FEATURES + INTER_HAND_FEATURES
 
 # ===== Subject-independent split =====
 TRAIN_PERSONS = ['person_01', 'person_02', 'person_03']
-VAL_PERSONS   = ['person_08']
-TEST_PERSONS  = ['person_07']
+VAL_PERSONS   = ['person_07']
+TEST_PERSONS  = ['person_08']
 
 # ===== 10 class được chọn =====
 SELECTED_CLASSES = [

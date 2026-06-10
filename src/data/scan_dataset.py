@@ -1,5 +1,5 @@
 """
-Step 1: Quet thu muc dataset -> sinh/cap nhat metadata.csv
+Step 1: Quét thư mục dataset -> sinh/cập nhật metadata.csv
 
 Usage: python src/scan_dataset.py
 """
@@ -19,7 +19,7 @@ SELECTED_CLASSES = config.SELECTED_CLASSES
 
 
 def load_existing_metadata():
-    """Doc metadata cu de giu nguyen id cho video da ton tai."""
+    """Đọc metadata cũ để giữ nguyên id cho video đã tồn tại."""
     if not os.path.exists(METADATA_PATH):
         return {}, 1
 
@@ -36,14 +36,14 @@ def load_existing_metadata():
 
 
 def has_landmark(row):
-    """Kiem tra landmark da ton tai cho row metadata nay chua."""
+    """Kiểm tra landmark đã tồn tại cho row metadata này chưa."""
     npy_name = f"{int(row['id']):04d}_{row['label']}_{row['person']}.npy"
     npy_path = os.path.join(LANDMARK_PATH, npy_name)
     return os.path.exists(npy_path)
 
 
 def scan_dataset():
-    """Quet tat ca video trong DATASET_ROOT va cap nhat metadata.csv."""
+    """Quét tất cả video trong DATASET_ROOT và cập nhật metadata.csv."""
     os.makedirs(os.path.dirname(METADATA_PATH), exist_ok=True)
 
     existing_metadata, next_id = load_existing_metadata()
@@ -107,20 +107,20 @@ def scan_dataset():
     labels = Counter(r['label'] for r in rows)
     persons = Counter(r['person'] for r in rows)
 
-    print(f"Da quet {len(rows)} videos -> {METADATA_PATH}")
-    print(f"\nSo class: {len(labels)}")
-    print(f"So nguoi: {len(persons)}")
+    print(f"Đã quét {len(rows)} videos -> {METADATA_PATH}")
+    print(f"\nSố class: {len(labels)}")
+    print(f"Số người: {len(persons)}")
     for person_name, count in sorted(persons.items()):
         print(f"  {person_name}: {count} videos")
 
-    print(f"\nVideos per label:")
+    print(f"\nSố videos trên mỗi class:")
     for label_name, count in sorted(labels.items()):
         print(f"  {label_name:15s}: {count}")
 
-    print(f"\nMetadata reuse:")
-    print(f"  Reused with landmark   : {reused_with_landmark}")
-    print(f"  Reused without landmark: {reused_without_landmark}")
-    print(f"  New rows               : {new_rows}")
+    print(f"\nTái sử dụng metadata:")
+    print(f"  Tái sử dụng với landmark   : {reused_with_landmark}")
+    print(f"  Tái sử dụng không với landmark: {reused_without_landmark}")
+    print(f"  Dòng mới                    : {new_rows}")
 
 
 if __name__ == '__main__':

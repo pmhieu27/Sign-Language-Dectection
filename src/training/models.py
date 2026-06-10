@@ -14,7 +14,6 @@ def build_cnn_lstm_model(seq_len, num_features, num_classes, name="CNN1D_LSTM_Si
             layers.BatchNormalization(),
             layers.MaxPooling1D(pool_size=2),
             layers.Dropout(0.3),
-            # layers.Bidirectional(layers.LSTM(64)),
             layers.LSTM(64),
             layers.BatchNormalization(),
             layers.Dropout(0.4),

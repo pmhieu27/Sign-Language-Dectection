@@ -89,7 +89,7 @@ def rotation_2d(seq, max_angle=15):
 
 
 def augment_train():
-    """Augment train set: mỗi sample sinh thêm 10 bản -> tổng x11."""
+    """Augment train set: mỗi sample sinh thêm bản ghi."""
     X_train = np.load(os.path.join(PROCESSED_PATH, 'X_train.npy'))
     y_train = np.load(os.path.join(PROCESSED_PATH, 'y_train.npy'))
 
@@ -122,7 +122,8 @@ def augment_train():
         X_aug.append(gaussian_jitter(seq, sigma=0.01))          
         y_aug.append(lbl)
         
-        # X_aug.append(scale_variation(seq));                      y_aug.append(lbl)
+        # X_aug.append(scale_variation(seq));
+        # y_aug.append(lbl)
 
         X_aug.append(rotation_2d(seq, max_angle=3))           
         y_aug.append(lbl)

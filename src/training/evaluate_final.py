@@ -36,7 +36,7 @@ def parse_args():
     if args.data_dir is None:
         args.data_dir = os.path.join(base, "datasets", "processed")
     if args.model_path is None:
-        args.model_path = os.path.join(model_dir, "cnn_lstm_best.keras")
+        args.model_path = os.path.join(model_dir, "cnn_lstm_final.keras")
     if args.save_dir is None:
         args.save_dir = model_dir
 
