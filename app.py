@@ -19,6 +19,8 @@ except ImportError:
         if libs_dir not in sys.path:
             sys.path.insert(0, libs_dir)
         sys.modules.pop("cv2", None)
+        if hasattr(sys, "OpenCV_LOADER"):
+            del sys.OpenCV_LOADER
         import cv2
         print("Successfully reinstalled opencv-python-headless to target directory!", file=sys.stderr)
     except Exception as e:
