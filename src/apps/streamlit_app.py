@@ -362,7 +362,7 @@ class SignVideoProcessor(VideoProcessorBase):
         except Exception:
             pass
 
-/**end of SignVideoProcessor**/
+
 def render_upload_tab(assets):
     st.markdown("""
     <div style="margin-bottom: 20px;">
