@@ -36,7 +36,7 @@ def load_existing_metadata():
 
 
 def has_landmark(row):
-    """Kiểm tra landmark đã tồn tại cho row metadata này chưa."""
+    """Kiểm tra landmark đã tồn tại cho row metadata này hay chưa...."""
     npy_name = f"{int(row['id']):04d}_{row['label']}_{row['person']}.npy"
     npy_path = os.path.join(LANDMARK_PATH, npy_name)
     return os.path.exists(npy_path)
